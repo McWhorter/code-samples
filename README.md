@@ -1,4 +1,4 @@
-# Welcome to Jason McWhorter's code samples and website portfolio
+# Welcome to the online portfolio of Jason McWhorter
 
 ## Website Portfolio
 
