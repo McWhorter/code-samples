@@ -2,7 +2,7 @@
 
 ## Website Portfolio
 
-I was responsibile for the complete buildout of all structure, styling, and functionality implemented within each site listed below.
+I was responsibile for the complete buildout of all structure, styling, and functionality implemented within each site listed below:
 
 - [Alameda County Employees’ Retirement Association](https://www.acera.org/)
 - [Old Sacramento Waterfront](https://www.oldsacramento.com/)
@@ -10,7 +10,7 @@ I was responsibile for the complete buildout of all structure, styling, and func
 
 ## Code Samples
 
-Below are small descriptions of each directory contained within this repository. Each give a glimpse into the work you can expect from me and my typical organization of code, documenation of logic, and overall structure for which I use. Enjoy!
+Below are small descriptions of each directory contained within this repository. Each gives a glimpse into the work you can expect from me and my typical organization of code, documenation of logic, and overall structure for which I use. Enjoy!
 
 ### Adaptable Navigation Menu Component
 
