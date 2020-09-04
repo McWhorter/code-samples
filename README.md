@@ -14,7 +14,7 @@ Below are small descriptions of each directory contained within this repository.
 
 ### Adaptable Navigation Menu
 
-*`./Naviation`*
+[code sample source](https://github.com/McWhorter/code-samples/tree/master/Navigation%20Menu)
 
 This navigation menu serves as both a vertical or horizontal orientation. It has other features which allow the visibility of submenus based on either hover or click interaction.
 
@@ -24,7 +24,7 @@ There are many more options to tinker with. Take a look under the hood at the `N
 
 ### Carousel Component
 
-*`./Carousel`*
+[code sample source](https://github.com/McWhorter/code-samples/tree/master/Carousel%20Component)
 
 A versatile slider/carousel powered by the Flickity NPM library.
 
@@ -34,12 +34,12 @@ The component also has a SVG/CSS powered progress loop to indicate the time left
 
 ### Accessibility Complient Panel Group Component
 
-*`./PanelGroup`*
+[code sample source](https://github.com/McWhorter/code-samples/tree/master/Panel%20Group)
 
 This component creates a toggle state to show/hide content based on user click interaction. It is useful to keep content organized and compact and is commonly a dropdown or accordion section.
 
-### Coding Style and Structure Example
+### Style and Structure Example
 
-*`./StyleStructure`*
+[code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure)
 
 This is an example of my typical directory structure, code style, and code standards.
