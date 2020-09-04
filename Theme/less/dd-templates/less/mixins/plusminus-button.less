@@ -1,0 +1,34 @@
+// ============================================================================
+// Plus / Minus toggle button
+// ============================================================================
+
+.plusminus-button(@button-size: 44px, @icon-size: 20px, @icon-thickness: 2px) {
+  @offset-1: (@button-size - @icon-thickness) / 2;
+  @offset-2: (@button-size - @icon-size) / 2;
+
+  position: relative;
+  width: @button-size;
+  height: @button-size;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    background-color: currentColor;
+  }
+
+  &:before {
+    top: @offset-1;
+    right: @offset-2;
+    width: @icon-size;
+    height: @icon-thickness;
+  }
+
+  &:after {
+    top: @offset-2;
+    right: @offset-1;
+    width: @icon-thickness;
+    height: @icon-size;
+  }
+}

@@ -1,0 +1,89 @@
+// =============================================================================
+// PRINT STYLING
+// =============================================================================
+
+@media print {
+  @page {
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  #admin-menu,
+  #quick-classes,
+  .dd-hover-expand,
+  .block-controls-wrapper {
+    display: none !important;
+  }
+
+  #lightbox,
+  #lightbox2-overlay {
+    display: none !important;
+  }
+
+  .above-page,
+  .below-page,
+  .hidden {
+    display: none !important;
+  }
+
+  .page {
+    padding: 0 !important;
+    overflow: visible !important;
+    background: none !important;
+  }
+
+  .page-closure {
+    display: none !important;
+  }
+
+  .flyout,
+  .page-footer {
+    display: none !important;
+  }
+
+  .page-top,
+  .page-left,
+  .page-right {
+    display: none !important;
+  }
+
+  .layout {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page-header,
+  .page-header .header {
+    position: relative !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .toolbar {
+    display: none !important;
+  }
+
+  .link-read-more {
+    display: none !important;
+  }
+
+  .dtabs {
+    display: none !important;
+  }
+
+  .under-tab {
+    display: block !important;
+  }
+
+  .field-image {
+    float: right !important;
+    width: 25% !important;
+    margin-left: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+}

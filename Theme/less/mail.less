@@ -1,0 +1,118 @@
+// =============================================================================
+// E-BLAST / EMAIL
+// =============================================================================
+
+// Color theme.
+@C1: #007a9f;
+@C2: #033d5e;
+
+// E-mail background
+
+#container {
+  background-color: #eee;
+}
+
+// Top and closure text, usually text displayed on the background of the e-mail
+
+#mail-top,
+#mail-top p,
+#mail-closure {
+  font-size: 12px;
+  color: #555;
+}
+
+// Top link color
+
+#mail-top a {
+  color: white;
+}
+
+// Closure link color
+
+#mail-closure a {
+  color: @C1;
+}
+
+// Header region, which is padded in like the body of the email and has a
+// background if there is header text to display. The header comes before
+// the logo.
+
+#mail-header-outer,
+#mail-header {
+  background-color: @C1;
+  color: #fff;
+}
+
+// Logo text, if images are disabled
+
+#mail-logo,
+#mail-logo h1 {
+  margin: 0 auto;
+  background-color: @C1;
+  color: #fff;
+}
+
+// Bar beneath the logo, usually has a solid background and light text,
+// holds the current date, issue number, or other information
+
+#mail-bar,
+#bar-left,
+#bar-right {
+  font-size: 12px;
+  background-color: @C2;
+  color: white;
+}
+
+// Color of links in that bar
+
+#mail-bar a {
+  color: white;
+}
+
+// Color of links inside the body
+
+#mail-body a {
+  color: @C1;
+}
+
+// E-mail footer, which is padded in like the body of the email and has
+// a background
+
+#mail-footer-outer,
+#mail-footer {
+  font-size: 14px;
+  background-color: #bcbcbc;
+  color: #656565;
+}
+
+// Headings
+
+h2,
+h2 a {
+  font: 24px bold Helvetica, "Helvetica Neue", Arial, sans-serif;
+  color: @C1;
+}
+
+// Subtitles
+
+h3,
+h3 a {
+  font: 18px normal Helvetica, "Helvetica Neue", Arial, sans-serif;
+  color: #363636;
+}
+
+h4,
+h5,
+h6 {
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  color: #363636;
+}
+
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h6 {
+  text-transform: uppercase;
+}

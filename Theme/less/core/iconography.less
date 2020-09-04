@@ -1,0 +1,50 @@
+/* stylelint-disable property-no-unknown */
+// =============================================================================
+// ICONOGRAPHY
+// =============================================================================
+
+.iconography {
+  text-align: center;
+
+  p {
+    margin: 10px 0;
+  }
+
+  span {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: @C2;
+    color: contrast(@C2);
+
+    &:hover {
+      background-color: @C1;
+      color: contrast(@C1);
+    }
+
+    // Icon
+
+    & {
+      .icon-builder(@theme-icons, before);
+    }
+
+    &:before {
+      .theme-font();
+
+      display: block;
+      margin-bottom: 5px;
+      font-size: 64px;
+      line-height: 1;
+      transition: all 0.1s ease-out;
+    }
+
+    code {
+      display: block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-family: Courier New, Courier, monospace;
+      background-color: #eaeaea;
+      color: #333;
+    }
+  }
+}

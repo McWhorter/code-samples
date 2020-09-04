@@ -1,0 +1,179 @@
+// =============================================================================
+// Create all of the calendar filters
+// =============================================================================
+
+.createCalendarFilters(@i:1) when (@i <= length(@calendar-filters-array)) {
+  @type: extract(extract(@calendar-filters-array, @i), 1);
+  @color: extract(extract(@calendar-filters-array, @i), 2);
+  .createCalendarFilter(@type, @color);
+  .createCalendarFilters((@i + 1));
+}
+
+// A helper function to create different themes for each filter
+
+.createCalendarFilter(@type, @color) {
+  .calendar-feed {
+    .node {
+      &.pt@{type} a.destination:before,
+      &.wt@{type} a.destination:before {
+        background-color: @color;
+      }
+    }
+
+    @media @tablet-down {
+      .filter.active.show-@{type} {
+        background-color: @color;
+        color: white;
+      }
+    }
+
+    @media @desktop {
+      .filter.show-@{type} {
+        border-color: @color;
+        background-color: transparent;
+        color: @color;
+
+        &:hover,
+        &.active {
+          background-color: @color;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.calendar-feed {
+  .filter {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  // Mobile version
+
+  @media @tablet-down {
+
+    // LIST ITEM DROPDOWN TRIGGER/BUTTON
+    .ctrl {
+      position: relative;
+      display: block;
+      padding: 4px 10px 4px 45px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 17px;
+      line-height: 21px;
+      text-align: left;
+      text-transform: none;
+      letter-spacing: normal;
+      color: #777;
+      cursor: pointer;
+
+      &:before {
+        .dd-templates-font();
+
+        content: @chevron-down-normal;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        bottom: 5px;
+        width: 34px;
+        height: auto;
+        font-size: 32px;
+        line-height: 18px;
+        border-right: 1px solid #ccc;
+      }
+    }
+
+    .filters {
+      position: relative;
+      z-index: 1000;
+      width: 100%;
+      max-height: 0;
+      margin-top: -16px;
+      overflow: hidden;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 0 solid #ccc;
+      border-radius: 0 0 5px 5px;
+      background-color: white;
+      box-sizing: border-box;
+      transition: all 0.3s ease-out;
+
+      // EXPANDED STYLING
+
+      &.expanded {
+        max-height: 500px;
+        border-bottom-width: 1px;
+      }
+
+      // Adds to top portion of the dropmenu, this is needed to not
+      // have a weird animation
+      &:before {
+        content: '';
+        display: block;
+        margin: 2px 10px 0;
+        border-top: 1px solid #ccc;
+      }
+    }
+
+    .filter {
+      display: block;
+      margin: 0;
+      padding: 8px 10px;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1;
+      border: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #777;
+      background-color: transparent;
+
+      &.active {
+        color: white;
+        background-color: @C1;
+      }
+
+      &:first-child {
+        margin-top: 8px;
+      }
+
+      &:last-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  // Desktop version
+
+  @media @desktop {
+    .ctrl {
+      display: none;
+    }
+
+    .filters {
+      margin-bottom: 40px;
+    }
+
+    .filter {
+      display: inline-block;
+      margin-right: 2px;
+      margin-bottom: 2px;
+      padding: 6px 12px;
+      border: 1px solid @C1;
+      border-radius: 2px;
+      background-color: transparent;
+      color: @C1;
+      cursor: pointer;
+      white-space: nowrap;
+      line-height: 1;
+    }
+  }
+}
+
+// Create the filters
+.createCalendarFilters();

@@ -1,0 +1,268 @@
+// =============================================================================
+// COMMON ELEMENTS
+// =============================================================================
+
+.block {
+  position: relative;
+}
+
+.channel,
+.subterm,
+.node {
+  float: none;
+  width: auto;
+}
+
+.channel,
+.subterm,
+.block,
+.node,
+.messages {
+  font-family: @F1;
+}
+
+.page,
+.above-page,
+.below-page {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.node {
+  font-size: @base_font_size;
+  line-height: @base_line_height;
+}
+
+.node-teaser {
+  margin-bottom: @post-bottom-margin;
+  padding-bottom: 0;
+  clear: both; // mainly to clear floated images
+}
+
+.node-header a,
+.node-header a:hover {
+  color: inherit;
+}
+
+.title {
+  color: inherit;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #363636;
+
+  h1 + & {
+    font-size: 3rem;
+  }
+
+  h2 + & {
+    font-size: 2.4rem;
+  }
+}
+
+body.t h1,
+body.section-taxonomy h1 {
+  display: block;
+}
+
+.h1 { &:extend(h1); }
+.h2 { &:extend(h2); }
+.h3 { &:extend(h3); }
+.h4 { &:extend(h4); }
+.h5 { &:extend(h5); }
+.h6 { &:extend(h6); }
+
+.page-right {
+  .block {
+    margin-bottom: 20px;
+    font-size: @base_font_size;
+  }
+
+  .block-title {
+    padding-top: 16px;
+    margin-bottom: 10px;
+    border-top: 1px solid @base_border_color;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    color: #363636;
+  }
+}
+
+.node-image {
+  margin-top: 0;
+}
+
+.field-image {
+  margin-bottom: 1em;
+
+  a {
+    text-decoration: none;
+
+    &:focus,
+    &.focus-visible {
+      outline: none;
+    }
+  }
+
+  img,
+  .node-teaser & img {
+    margin: 0;
+  }
+}
+
+.node-image .field-image,
+.node-image .gallery {
+  margin-top: @base_font_size;
+}
+
+.node-image .gallery .field-image {
+  margin-top: 0;
+}
+
+.caption {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+.field-image.has-caption {
+  a {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.node-meta {
+  display: none;
+  // Show on full post view since we're moving the meta down below the header
+  .node-full & {
+    display: block;
+  }
+}
+
+.meta-item,
+.meta-item a {
+  color: #777;
+}
+
+.meta .meta-item a:hover {
+  text-decoration: underline @C1;
+}
+
+.meta .meta-item {
+  text-transform: uppercase;
+}
+
+.meta .event-date {
+  display: inherit;
+}
+
+.node-content {
+  ul,
+  ol {
+    margin: 1em 0;
+    padding-left: 1.25em;
+    overflow: visible;
+    clear: left;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+}
+
+// =============================================================================
+// Improve the external link theme
+// =============================================================================
+
+span.ext {
+  background: none;
+  padding-right: 0;
+  padding-left: 0.2em;
+
+  &:after {
+    &:extend(.dd-templates-font);
+
+    content: @attachments-external;
+    line-height: inherit;
+    vertical-align: middle;
+    opacity: 0.5;
+  }
+}
+
+// =============================================================================
+// EMBED IMAGES WITHIN NODE CONTENT
+// =============================================================================
+
+.node-content img,
+.node-content .field-image img {
+  float: none;
+  max-width: 100%;
+  margin: 0;
+}
+
+// =============================================================================
+// VIDEO PLAY BUTTON
+// =============================================================================
+
+.video-play {
+  opacity: 0.5;
+  background: none;
+  transition: opacity 0.3s ease-out;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -24px;
+    margin-left: -24px;
+    font-size: 48px;
+    &:extend(.dd-templates-font);
+
+    content: @dd-templates-play;
+    color: white;
+  }
+}
+
+.field-video .video-lightframe {
+  // Contains the parent link container to only be as wide as the image. This
+  // prevents the video play button from extending to the full width of the
+  // content area it's displayed in.
+  display: inline-block;
+}
+
+a.video-lightframe:hover .video-play {
+  background: transparent;
+  opacity: 0.9;
+}
+
+// Restricts email address from overflowing out of it's container
+
+.node-contact-wrapper {
+  width: 100%;
+  margin: 1em 0;
+}
+
+// Add focus state to match form-submit button
+
+.btn,
+.form-submit,
+.form-button {
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px @C1;
+  }
+}
+
+// Non-interactive elements which are targets of skip links.
+// @info https://www.w3.org/TR/html5/editing.html#the-tabindex-attribute
+
+#content,
+#navigation {
+  outline: 0;
+}

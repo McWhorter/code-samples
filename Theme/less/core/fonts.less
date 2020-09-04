@@ -1,0 +1,19 @@
+/* stylelint-disable property-no-unknown */
+// =============================================================================
+// THEME ICON FONT
+// =============================================================================
+
+@icon-font-project: 'BaseTheme';
+@icon-font-version: 'd2wzd3';
+
+@import 'https://d1azc1qln24ryf.cloudfront.net/66770/@{icon-font-project}/style-cf.css?@{icon-font-version}';
+
+@theme-icons: {
+  menu: '\2261';
+  close: '\2716';
+  search: '\1f50d';
+}
+
+.theme-font {
+  .icon-font-basics('theme');
+}

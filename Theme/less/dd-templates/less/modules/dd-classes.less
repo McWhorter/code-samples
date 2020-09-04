@@ -1,0 +1,186 @@
+// =============================================================================
+// COLUMN/GRID LAYOUTS
+// =============================================================================
+
+.col-1 .views-row { width: 100%; }
+
+// Make sure we start fresh from any previously floated content (e.g. image within an overview)
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+  clear: both;
+}
+
+@media (min-width: 640px) {
+  // engage the containers to allow for column layouts
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6 {
+    .view-content {
+      font-size: 0;
+    }
+
+    .views-row {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    // Add support for model change that modernizes tabs to be compatible for newer themes
+    .js-tabs-show {
+      display: inline-block !important;
+    }
+
+    .node {
+      font-size: @base_font_size;
+    }
+  }
+
+  // Force these all to be 2 columns
+  .col-2 .views-row,
+  .col-3 .views-row,
+  .col-4 .views-row,
+  .col-5 .views-row,
+  .col-6 .views-row {
+    width: 100%/2;
+  }
+}
+
+// Allow the intended column count
+@media @desktop {
+  .col-3 .views-row { width: 100%/3; }
+  .col-4 .views-row { width: 100%/4; }
+  .col-5 .views-row { width: 100%/5; }
+  .col-6 .views-row { width: 100%/6; }
+}
+
+// =============================================================================
+//  GUTTER LAYOUTS
+// =============================================================================
+
+@media (min-width: 640px) {
+  .gap-0 .view-content { margin-left: 0; }
+  .gap-0 .node { margin-left: 0; }
+  .gap-10 .view-content { margin-left: -10px; }
+  .gap-10 .node { margin-left: 10px; }
+  .gap-15 .view-content { margin-left: -15px; }
+  .gap-15 .node { margin-left: 15px; }
+  .gap-20 .view-content { margin-left: -20px; }
+  .gap-20 .node { margin-left: 20px; }
+  .gap-25 .view-content { margin-left: -25px; }
+  .gap-25 .node { margin-left: 25px; }
+  .gap-30 .view-content { margin-left: -30px; }
+  .gap-30 .node { margin-left: 30px; }
+  .gap-35 .view-content { margin-left: -35px; }
+  .gap-35 .node { margin-left: 35px; }
+  .gap-40 .view-content { margin-left: -40px; }
+  .gap-40 .node { margin-left: 40px; }
+}
+
+// =============================================================================
+// FIELD IMAGE WIDTH HELPER CLASSES
+// =============================================================================
+
+@media (min-width: 640px) {
+  .fiw-25 .node-item:not(.node-content) .field-image { max-width: 25% !important; }
+  .fiw-30 .node-item:not(.node-content) .field-image { max-width: 30% !important; }
+  .fiw-35 .node-item:not(.node-content) .field-image { max-width: 35% !important; }
+}
+
+@media @desktop {
+  .fiw-40 .node-item:not(.node-content) .field-image { max-width: 40% !important; }
+  .fiw-50 .node-item:not(.node-content) .field-image { max-width: 50% !important; }
+  .fiw-60 .node-item:not(.node-content) .field-image { max-width: 60% !important; }
+  .fiw-75 .node-item:not(.node-content) .field-image { max-width: 75% !important; }
+}
+
+.fiw-100 .node-item:not(.node-content) .field-image { max-width: 100% !important; }
+
+// =============================================================================
+// FIELD IMAGE FLOAT HELPER CLASSES
+// =============================================================================
+
+.float-image-left() {
+  float: left;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.float-image-right() {
+  float: right;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.fif-lt .node-item:not(.node-content) .field-image {
+  @media @desktop {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
+.fif-rt .node-item:not(.node-content) .field-image {
+  @media @desktop {
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+.fif-no .node-item:not(.node-content) .field-image {
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.fif-lt {
+  &.fiw-25 .node-item:not(.node-content),
+  &.fiw-30 .node-item:not(.node-content),
+  &.fiw-35 .node-item:not(.node-content) {
+    .field-image {
+      @media (min-width: 640px) {
+        .float-image-left();
+      }
+    }
+  }
+
+  &.fiw-40 .node-item:not(.node-content),
+  &.fiw-50 .node-item:not(.node-content),
+  &.fiw-60 .node-item:not(.node-content),
+  &.fiw-75 .node-item:not(.node-content) {
+    .field-image {
+      @media @desktop {
+        .float-image-left();
+      }
+    }
+  }
+}
+
+.fif-rt {
+  &.fiw-25 .node-item:not(.node-content),
+  &.fiw-30 .node-item:not(.node-content),
+  &.fiw-35 .node-item:not(.node-content) {
+    .field-image {
+      @media (min-width: 640px) {
+        .float-image-right();
+      }
+    }
+  }
+
+  &.fiw-40 .node-item:not(.node-content),
+  &.fiw-50 .node-item:not(.node-content),
+  &.fiw-60 .node-item:not(.node-content),
+  &.fiw-75 .node-item:not(.node-content) {
+    .field-image {
+      @media @desktop {
+        .float-image-right();
+      }
+    }
+  }
+}

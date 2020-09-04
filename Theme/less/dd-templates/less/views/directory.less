@@ -1,0 +1,129 @@
+// =============================================================================
+// DIRECTORIES
+// =============================================================================
+
+.modern-directory {
+  font-family: @F1;
+
+  .view-filters {
+    border-top: 1px solid @base_border_color;
+  }
+
+  .views-exposed-widgets {
+    margin: 1em 0;
+  }
+
+  .views-exposed-widget {
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0;
+
+    label {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+  }
+
+  #edit-keys-wrapper {
+    width: 200px;
+    height: 31px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid @base_border_color;
+    box-sizing: border-box;
+    background: #f2f2f2;
+
+    input[type=text] {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: 21px;
+      background: #f2f2f2;
+    }
+  }
+
+  .views-submit-button .form-submit {
+    margin-top: 0;
+  }
+
+  // This is the item list of letters to filter by
+
+  .attachment {
+    margin: 1em 0;
+  }
+
+  .item-list {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &.pager-current {
+        margin-bottom: 4px;
+        padding: 3px 10px;
+      }
+    }
+
+    a {
+      display: block;
+      margin-bottom: 4px;
+      padding: 3px 9px;
+      line-height: 21px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease-out;
+      background-color: @C1;
+      color: white;
+
+      &:hover {
+        background-color: @C2;
+      }
+    }
+  }
+
+  // Results display (nodes/posts)
+
+  .node {
+    clear: both;
+  }
+
+  .node-item {
+    display: none;
+  }
+
+  .node-image,
+  .node-header,
+  .node-contact,
+  .node-upper-meta {
+    display: block;
+  }
+
+  .field-image {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .has-image {
+    .node-header,
+    .node-contact {
+      float: right;
+      width: 70%;
+    }
+
+    .node-image {
+      float: left;
+      max-width: 25% !important;
+    }
+  }
+}

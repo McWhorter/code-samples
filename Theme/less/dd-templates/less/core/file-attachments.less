@@ -1,0 +1,60 @@
+/* ========================================================================== *\
+   ICONS AND INLINE FILE ATTACHMENTS
+\* ========================================================================== */
+
+.link,
+.file {
+  a:before {
+    .dd-templates-font();
+
+    display: inline-block;
+    line-height: inherit;
+    padding-right: 0.2em;
+  }
+}
+
+.link-related:not(.link-read-more) a:before {
+  content: @attachments-link;
+}
+
+.file {
+  /* stylelint-disable declaration-block-single-line-max-declarations */
+
+  // Document
+  &.file-text-html a:before,
+  &.file-text-plain a:before { content: @attachments-file-html; }
+  // CSS
+  &.file-text-css a:before { content: @attachments-file-css; }
+  // XML
+  &.file-application-xml a:before { content: @attachments-file-xml; }
+  // ZIP
+  &.file-application-zip a:before { content: @attachments-file-zip; }
+  // MS Apps
+  &.file-application-pdf a:before { content: @attachments-file-pdf; color: #f91916; }
+  &.file-application-msword a:before { content: @attachments-file-word; color: #2a5699; }
+  &.file-application-vnd-ms-excel a:before { content: @attachments-file-excel; color: #227547; }
+  &.file-application-vnd-ms-powerpoint a:before { content: @attachments-file-powerpoint; color: #d14524; }
+  // Open Office Documents
+  &.file-application-vnd-openxmlformats-officedocument-spreadsheetml-sheet a:before { content: @attachments-file-excel; color: #227547; }
+  &.file-application-vnd-openxmlformats-officedocument-wordprocessingml-document a:before { content: @attachments-file-word; color: #2a5699; }
+  &.file-application-vnd-openxmlformats-officedocument-presentationml-presentation a:before { content: @attachments-file-powerpoint; color: #d14524; }
+  // Console
+  &.file-application-x-msdos-program a:before { content: @attachments-console; color: black; }
+  // Image
+  &.file-image-gif a:before,
+  &.file-image-png a:before,
+  &.file-image-jpeg a:before { content: @attachments-image; }
+  // Music
+  &.file-audio-mpeg a:before { content: @attachments-music; }
+  // Movie
+  &.file-video-mpg a:before,
+  &.file-video-mpeg a:before,
+  &.file-video-quicktime a:before { content: @attachments-film; }
+
+  /* stylelint-enable */
+
+  span& a {
+    padding-left: 0 !important;
+    background-image: none !important;
+  }
+}

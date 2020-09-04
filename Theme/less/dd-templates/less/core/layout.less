@@ -1,0 +1,30 @@
+// =============================================================================
+// LAYOUT
+// =============================================================================
+
+.layout {
+  max-width: @max-width;
+  box-sizing: border-box;
+  margin-left: @gutters[base];
+  margin-right: @gutters[base];
+
+  @media @mobile {
+    margin-left: @gutters[mobile];
+    margin-right: @gutters[mobile];
+  }
+
+  @media @tablet {
+    margin-left: @gutters[tablet];
+    margin-right: @gutters[tablet];
+  }
+
+  @media @desktop {
+    margin-left: @gutters[desktop];
+    margin-right: @gutters[desktop];
+  }
+
+  @media @desktop-xl {
+    margin-left: @gutters[desktop-xl];
+    margin-right: @gutters[desktop-xl];
+  }
+}

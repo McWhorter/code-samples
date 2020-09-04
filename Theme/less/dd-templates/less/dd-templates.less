@@ -1,0 +1,258 @@
+// =============================================================================
+// DD TEMPLATES
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Mixins Components
+// -----------------------------------------------------------------------------
+
+@dd_templates_mixins: reboot-button, icon-builder, arrow-button, plusminus-button, progress-loop, underline;
+
+@dd_templates_mixins_reboot_button: true;
+@dd_templates_mixins_icon_builder: true;
+@dd_templates_mixins_arrow_button: true;
+@dd_templates_mixins_plusminus_button: true;
+@dd_templates_mixins_progress_loop: true;
+@dd_templates_mixins_underline: true;
+
+// default
+
+.dd_templates_mixins(reboot-button) when (@dd_templates_mixins_reboot_button = true) { @import 'mixins/reboot-button'; }
+.dd_templates_mixins(icon-builder) when (@dd_templates_mixins_icon_builder = true) { @import 'mixins/icon-builder'; }
+.dd_templates_mixins(arrow-button) when (@dd_templates_mixins_arrow_button = true) { @import 'mixins/arrow-button'; }
+.dd_templates_mixins(plusminus-button) when (@dd_templates_mixins_plusminus_button = true) { @import 'mixins/plusminus-button'; }
+.dd_templates_mixins(progress-loop) when (@dd_templates_mixins_progress_loop = true) { @import 'mixins/progress-loop'; }
+.dd_templates_mixins(underline) when (@dd_templates_mixins_underline = true) { @import 'mixins/underline'; }
+
+// alternate
+
+.dd_templates_mixins(reboot-button) when (@dd_templates_mixins_reboot_button = alternate) { @import (optional) '@{theme_path}/mixins/reboot-button'; }
+.dd_templates_mixins(icon-builder) when (@dd_templates_mixins_icon_builder = alternate) { @import (optional) '@{theme_path}/mixins/icon-builder'; }
+.dd_templates_mixins(arrow-button) when (@dd_templates_mixins_arrow_button = alternate) { @import (optional) '@{theme_path}/mixins/arrow-button'; }
+.dd_templates_mixins(plusminus-button) when (@dd_templates_mixins_plusminus_button = alternate) { @import (optional) '@{theme_path}/mixins/plusminus-button'; }
+.dd_templates_mixins(progress-loop) when (@dd_templates_mixins_progress_loop = alternate) { @import (optional) '@{theme_path}/mixins/progress-loop'; }
+.dd_templates_mixins(underline) when (@dd_templates_mixins_underline = alternate) { @import (optional) '@{theme_path}/mixins/underline'; }
+
+// -----------------------------------------------------------------------------
+// Core Components
+// -----------------------------------------------------------------------------
+
+@dd_templates_core: fonts, easing, elements, admin, code, messages, accessibility, clearfix, common, layout, resets, buttons, tables, meta, webforms, links, file-attachments, read-more-links, expanding-dates, accordions, slideshow, pager, tab, glossary, lightbox;
+
+@dd_templates_core_fonts: true;
+@dd_templates_core_easing: true;
+@dd_templates_core_elements: true;
+@dd_templates_core_admin: true;
+@dd_templates_core_code: true;
+@dd_templates_core_messages: true;
+@dd_templates_core_accessibility: true;
+@dd_templates_core_clearfix: true;
+@dd_templates_core_common: true;
+@dd_templates_core_layout: true;
+@dd_templates_core_resets: true;
+@dd_templates_core_buttons: true;
+@dd_templates_core_tables: true;
+@dd_templates_core_meta: true;
+@dd_templates_core_webforms: true;
+@dd_templates_core_links: true;
+@dd_templates_core_file_attachments: true;
+@dd_templates_core_read_more_links: true;
+@dd_templates_core_expanding_dates: true;
+@dd_templates_core_accordions: true;
+@dd_templates_core_slideshow: true;
+@dd_templates_core_site_identity: true;
+@dd_templates_core_pager: true;
+@dd_templates_core_tabs: true;
+@dd_templates_core_glossary: true;
+@dd_templates_core_lightbox: true;
+
+// default
+
+.dd_templates_core(fonts) when (@dd_templates_core_fonts = true) { @import 'core/fonts'; }
+.dd_templates_core(easing) when (@dd_templates_core_easing = true) { @import 'core/easing'; }
+.dd_templates_core(elements) when (@dd_templates_core_elements = true) { @import 'core/elements'; }
+.dd_templates_core(admin) when (@dd_templates_core_admin = true) { @import 'core/admin'; }
+.dd_templates_core(code) when (@dd_templates_core_code = true) { @import 'core/code'; }
+.dd_templates_core(messages) when (@dd_templates_core_messages = true) { @import 'core/messages'; }
+.dd_templates_core(accessibility) when (@dd_templates_core_accessibility = true) { @import 'core/accessibility'; }
+.dd_templates_core(clearfix) when (@dd_templates_core_clearfix = true) { @import 'core/clearfix'; }
+.dd_templates_core(common) when (@dd_templates_core_common = true) { @import 'core/common'; }
+.dd_templates_core(layout) when (@dd_templates_core_layout = true) { @import 'core/layout'; }
+.dd_templates_core(resets) when (@dd_templates_core_resets = true) { @import 'core/resets'; }
+.dd_templates_core(buttons) when (@dd_templates_core_buttons = true) { @import 'core/buttons'; }
+.dd_templates_core(tables) when (@dd_templates_core_tables = true) { @import 'core/tables'; }
+.dd_templates_core(meta) when (@dd_templates_core_meta = true) { @import 'core/meta'; }
+.dd_templates_core(webforms) when (@dd_templates_core_webforms = true) { @import 'core/webforms'; }
+.dd_templates_core(links) when (@dd_templates_core_links = true) { @import 'core/links'; }
+.dd_templates_core(file-attachments) when (@dd_templates_core_file_attachments = true) { @import 'core/file-attachments'; }
+.dd_templates_core(read-more-links) when (@dd_templates_core_read_more_links = true) { @import 'core/read-more-links'; }
+.dd_templates_core(expanding-dates) when (@dd_templates_core_expanding_dates = true) { @import 'core/expanding-dates'; }
+.dd_templates_core(accordions) when (@dd_templates_core_accordions = true) { @import 'core/accordions'; }
+.dd_templates_core(slideshow) when (@dd_templates_core_slideshow = true) { @import 'core/slideshow'; }
+.dd_templates_core(pager) when (@dd_templates_core_pager = true) { @import 'core/pager'; }
+.dd_templates_core(tab) when (@dd_templates_core_tabs = true) { @import 'core/tabs'; }
+.dd_templates_core(glossary) when (@dd_templates_core_glossary = true) { @import 'core/glossary'; }
+.dd_templates_core(lightbox) when (@dd_templates_core_lightbox = true) { @import 'core/lightbox'; }
+
+// alternate
+
+.dd_templates_core(fonts) when (@dd_templates_core_fonts = alternate) { @import (optional) '@{theme_path}/core/fonts'; }
+.dd_templates_core(easing) when (@dd_templates_core_easing = alternate) { @import (optional) '@{theme_path}/core/easing'; }
+.dd_templates_core(elements) when (@dd_templates_core_elements = alternate) { @import (optional) '@{theme_path}/core/elements'; }
+.dd_templates_core(admin) when (@dd_templates_core_admin = alternate) { @import (optional) '@{theme_path}/core/admin'; }
+.dd_templates_core(code) when (@dd_templates_core_code = alternate) { @import (optional) '@{theme_path}/core/code'; }
+.dd_templates_core(messages) when (@dd_templates_core_messages = alternate) { @import (optional) '@{theme_path}/core/messages'; }
+.dd_templates_core(accessibility) when (@dd_templates_core_accessibility = alternate) { @import (optional) '@{theme_path}/core/accessibility'; }
+.dd_templates_core(clearfix) when (@dd_templates_core_clearfix = alternate) { @import (optional) '@{theme_path}/core/clearfix'; }
+.dd_templates_core(common) when (@dd_templates_core_common = alternate) { @import (optional) '@{theme_path}/core/common'; }
+.dd_templates_core(layout) when (@dd_templates_core_layout = alternate) { @import (optional) '@{theme_path}/core/layout'; }
+.dd_templates_core(resets) when (@dd_templates_core_resets = alternate) { @import (optional) '@{theme_path}/core/resets'; }
+.dd_templates_core(buttons) when (@dd_templates_core_buttons = alternate) { @import (optional) '@{theme_path}/core/buttons'; }
+.dd_templates_core(tables) when (@dd_templates_core_tables = alternate) { @import (optional) '@{theme_path}/core/tables'; }
+.dd_templates_core(meta) when (@dd_templates_core_meta = alternate) { @import (optional) '@{theme_path}/core/meta'; }
+.dd_templates_core(webforms) when (@dd_templates_core_webforms = alternate) { @import (optional) '@{theme_path}/core/webforms'; }
+.dd_templates_core(links) when (@dd_templates_core_links = alternate) { @import (optional) '@{theme_path}/core/links'; }
+.dd_templates_core(file-attachments) when (@dd_templates_core_file_attachments = alternate) { @import (optional) '@{theme_path}/core/file-attachments'; }
+.dd_templates_core(read-more-links) when (@dd_templates_core_read_more_links = alternate) { @import (optional) '@{theme_path}/core/read-more-links'; }
+.dd_templates_core(expanding-dates) when (@dd_templates_core_expanding_dates = alternate) { @import (optional) '@{theme_path}/core/expanding-dates'; }
+.dd_templates_core(accordions) when (@dd_templates_core_accordions = alternate) { @import (optional) '@{theme_path}/core/accordions'; }
+.dd_templates_core(slideshow) when (@dd_templates_core_slideshow = alternate) { @import (optional) '@{theme_path}/core/slideshow'; }
+.dd_templates_core(pager) when (@dd_templates_core_pager = alternate) { @import (optional) '@{theme_path}/core/pager'; }
+.dd_templates_core(tab) when (@dd_templates_core_tabs = alternate) { @import (optional) '@{theme_path}/core/tabs'; }
+.dd_templates_core(glossary) when (@dd_templates_core_glossary = alternate) { @import (optional) '@{theme_path}/core/glossary'; }
+.dd_templates_core(lightbox) when (@dd_templates_core_lightbox = alternate) { @import (optional) '@{theme_path}/core/lightbox'; }
+
+// -----------------------------------------------------------------------------
+// Modules Components
+// -----------------------------------------------------------------------------
+
+@dd_templates_modules: dd-classes;
+
+@dd_templates_modules_dd_classes: true;
+
+// default
+
+.dd_templates_modules(dd-classes) when (@dd_templates_modules_dd_classes = true) { @import 'modules/dd-classes'; }
+
+// alternate
+
+.dd_templates_modules(dd-classes) when (@dd_templates_modules_dd_classes = alternate) { @import (optional) '@{theme_path}/modules/dd-classes'; }
+
+// -----------------------------------------------------------------------------
+// Views Components
+// -----------------------------------------------------------------------------
+
+@dd_templates_views: full, print, search, subterms, directory;
+
+@dd_templates_views_full: true;
+@dd_templates_views_print: true;
+@dd_templates_views_search: true;
+@dd_templates_views_subterms: true;
+@dd_templates_views_directory: true;
+
+// default
+
+.dd_templates_views(full) when (@dd_templates_views_full = true) { @import 'views/full'; }
+.dd_templates_views(print) when (@dd_templates_views_print = true) { @import 'views/print'; }
+.dd_templates_views(search) when (@dd_templates_views_search = true) { @import 'views/search'; }
+.dd_templates_views(subterms) when (@dd_templates_views_subterms = true) { @import 'views/subterms'; }
+.dd_templates_views(directory) when (@dd_templates_views_directory = true) { @import 'views/directory'; }
+
+// alternate
+
+.dd_templates_views(full) when (@dd_templates_views_full = alternate) { @import (optional) '@{theme_path}/views/full'; }
+.dd_templates_views(print) when (@dd_templates_views_print = alternate) { @import (optional) '@{theme_path}/views/print'; }
+.dd_templates_views(search) when (@dd_templates_views_search = alternate) { @import (optional) '@{theme_path}/views/search'; }
+.dd_templates_views(subterms) when (@dd_templates_views_subterms = alternate) { @import (optional) '@{theme_path}/views/subterms'; }
+.dd_templates_views(directory) when (@dd_templates_views_directory = alternate) { @import (optional) '@{theme_path}/views/directory'; }
+
+// -----------------------------------------------------------------------------
+// Blocks Components
+// -----------------------------------------------------------------------------
+
+@dd_templates_blocks: admin-menu, ui-dialog, breadcrumb, overviews, appearing-navigation, dd-social, node-sidebar, node-contacts, node-profiles;
+
+@dd_templates_blocks_admin_menu: true;
+@dd_templates_blocks_ui_dialog: true;
+@dd_templates_blocks_breadcrumb: true;
+@dd_templates_blocks_overviews: true;
+@dd_templates_blocks_appearing_navigation: true;
+@dd_templates_blocks_dd_social: true;
+@dd_templates_blocks_node_sidebar: true;
+@dd_templates_blocks_node_contacts: true;
+@dd_templates_blocks_node_profiles: true;
+
+// default
+
+.dd_templates_blocks(admin-menu) when (@dd_templates_blocks_admin_menu = true) { @import 'blocks/admin-menu'; }
+.dd_templates_blocks(ui-dialog) when (@dd_templates_blocks_ui_dialog = true) { @import 'blocks/ui-dialog'; }
+.dd_templates_blocks(breadcrumb) when (@dd_templates_blocks_breadcrumb = true) { @import 'blocks/breadcrumb'; }
+.dd_templates_blocks(overviews) when (@dd_templates_blocks_overviews = true) { @import 'blocks/overviews'; }
+.dd_templates_blocks(appearing-navigation) when (@dd_templates_blocks_appearing_navigation = true) { @import 'blocks/appearing-navigation'; }
+.dd_templates_blocks(dd-social) when (@dd_templates_blocks_dd_social = true) { @import 'blocks/dd-social'; }
+.dd_templates_blocks(node-sidebar) when (@dd_templates_blocks_node_sidebar = true) { @import 'blocks/node-sidebar'; }
+.dd_templates_blocks(node-contacts) when (@dd_templates_blocks_node_contacts = true) { @import 'blocks/node-contacts'; }
+.dd_templates_blocks(node-profiles) when (@dd_templates_blocks_node_profiles = true) { @import 'blocks/node-profiles'; }
+
+// alternate
+
+.dd_templates_blocks(admin-menu) when (@dd_templates_blocks_admin_menu = alternate) { @import (optional) '@{theme_path}/blocks/admin-menu'; }
+.dd_templates_blocks(ui-dialog) when (@dd_templates_blocks_ui_dialog = alternate) { @import (optional) '@{theme_path}/blocks/ui-dialog'; }
+.dd_templates_blocks(breadcrumb) when (@dd_templates_blocks_breadcrumb = alternate) { @import (optional) '@{theme_path}/blocks/breadcrumb'; }
+.dd_templates_blocks(overviews) when (@dd_templates_blocks_overviews = alternate) { @import (optional) '@{theme_path}/blocks/overviews'; }
+.dd_templates_blocks(appearing-navigation) when (@dd_templates_blocks_appearing_navigation = alternate) { @import (optional) '@{theme_path}/blocks/appearing-navigation'; }
+.dd_templates_blocks(dd-social) when (@dd_templates_blocks_dd_social = alternate) { @import (optional) '@{theme_path}/blocks/dd-social'; }
+.dd_templates_blocks(node-sidebar) when (@dd_templates_blocks_node_sidebar = alternate) { @import (optional) '@{theme_path}/blocks/node-sidebar'; }
+.dd_templates_blocks(node-contacts) when (@dd_templates_blocks_node_contacts = alternate) { @import (optional) '@{theme_path}/blocks/node-contacts'; }
+.dd_templates_blocks(node-profiles) when (@dd_templates_blocks_node_profiles = alternate) { @import (optional) '@{theme_path}/blocks/node-profiles'; }
+
+// -----------------------------------------------------------------------------
+// Content Layout Libraries/Helpers
+// -----------------------------------------------------------------------------
+
+@dd_templates_libraries: image-position, content-control;
+
+@dd_templates_libraries_image_position: true;
+@dd_templates_libraries_content_control: true;
+
+// default
+
+.dd_templates_libraries(image-position) when (@dd_templates_libraries_image_position = true) { @import 'libraries/image-position'; }
+.dd_templates_libraries(content-control) when (@dd_templates_libraries_content_control = true) { @import 'libraries/content-control'; }
+
+// alternate
+
+.dd_templates_libraries(image-position) when (@dd_templates_libraries_image_position = alternate) { @import (optional) '@{theme_path}/libraries/image-position'; }
+.dd_templates_libraries(content-control) when (@dd_templates_libraries_content_control = alternate) { @import (optional) '@{theme_path}/libraries/content-control'; }
+
+// -----------------------------------------------------------------------------
+// A loop for loading each less file as part of a set
+// -----------------------------------------------------------------------------
+
+.dd_templates_factory(@type, @components, @total, @index: 1) when (@index =< @total) {
+  @component: extract(@components, @index);
+  .factory(mixins) { .dd_templates_mixins(@component); }
+  .factory(core) { .dd_templates_core(@component); }
+  .factory(modules) { .dd_templates_modules(@component); }
+  .factory(views) { .dd_templates_views(@component); }
+  .factory(blocks) { .dd_templates_blocks(@component); }
+  .factory(libraries) { .dd_templates_libraries(@component); }
+  // load the component
+  .factory(@type);
+  // continue the loop as long as there is another component in the set
+  .dd_templates_factory(@type, @components, @total, (@index + 1));
+}
+
+// -----------------------------------------------------------------------------
+// Initialization of DD Templates. All variables that need to be changed from
+// default would need to be set before calling this function.
+// -----------------------------------------------------------------------------
+
+.dd_templates_init() {
+  .dd_templates_factory(mixins, @dd_templates_mixins, length(@dd_templates_mixins));
+  .dd_templates_factory(core, @dd_templates_core, length(@dd_templates_core));
+  .dd_templates_factory(modules, @dd_templates_modules, length(@dd_templates_modules));
+  .dd_templates_factory(views, @dd_templates_views, length(@dd_templates_views));
+  .dd_templates_factory(blocks, @dd_templates_blocks, length(@dd_templates_blocks));
+  .dd_templates_factory(libraries, @dd_templates_libraries, length(@dd_templates_libraries));
+}

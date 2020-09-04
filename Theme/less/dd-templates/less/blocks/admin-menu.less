@@ -1,0 +1,33 @@
+// =============================================================================
+// ADMIN MENU
+// =============================================================================
+
+#admin-menu {
+  // Flatten the admin menu background to a plain color.
+  outline: 1px solid #323232;
+  outline-offset: -1px;
+  background: black;
+
+  ul a {
+    padding: 4px 10px;
+  }
+
+  .admin-menu-icon {
+    & > a {
+      display: block;
+
+      img {
+        display: none;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('@{faviconPath}/favicon.ico') no-repeat left top transparent;
+        background-size: 16px;
+      }
+    }
+  }
+}

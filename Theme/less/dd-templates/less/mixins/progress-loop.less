@@ -1,0 +1,47 @@
+// ==========================================================================
+// Progress Loop
+// ==========================================================================
+
+.progress-loop(@size: 50px, @stroke: 5px, @namespace: default-loop-animation) {
+  @circ: pi() * (@size - @stroke);
+
+  width: @size;
+  height: @size;
+  transform: rotate(-86deg);
+
+  .progress {
+    cx: @size / 2;
+    cy: @size / 2;
+    r: (@size - @stroke) / 2;
+    stroke-width: @stroke;
+    animation: 3000ms linear;
+    stroke-dashoffset: @circ;
+    stroke-dasharray: @circ;
+    stroke-linecap: round;
+    stroke: @a11y-grey;
+    fill: transparent;
+  }
+
+  .halo {
+    cx: @size / 2;
+    cy: @size / 2;
+    r: (@size - @stroke) / 2;
+    stroke-width: 1px;
+    stroke: @a11y-grey;
+    fill: transparent;
+  }
+
+  &.running .progress {
+    animation-name: @namespace;
+  }
+
+  @keyframes @namespace {
+    from {
+      stroke-dashoffset: @circ;
+    }
+
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

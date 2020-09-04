@@ -1,0 +1,128 @@
+// =============================================================================
+// IMAGE POSITION CLASS LIBRARY
+// =============================================================================
+
+.node-content .image {
+  &.circle {
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  // CENTER IMAGES
+
+  &.center {
+    margin: 0 auto;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  // FLOAT THEM TO EITHER SIDE
+
+  @media (min-width: 640px) {
+    &.right {
+      float: right;
+      max-width: 35% !important;
+      margin-right: 0;
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
+
+    &.left {
+      float: left;
+      max-width: 35% !important;
+      margin-left: 0;
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  @media @desktop {
+    &.right {
+      max-width: 50% !important;
+    }
+
+    &.left {
+      max-width: 50% !important;
+    }
+  }
+
+  // FIELD IMAGE WIDTH HELPER CLASSES
+
+  @media (min-width: 640px) {
+    &.w25 {
+      max-width: 25% !important;
+    }
+
+    &.w30 {
+      max-width: 30% !important;
+    }
+
+    &.w35,
+    &.w40,
+    &.w45,
+    &.w50 {
+      max-width: 35% !important;
+    }
+  }
+
+  @media @desktop {
+    &.w40 { max-width: 40% !important; }
+    &.w45 { max-width: 45% !important; }
+    &.w50 { max-width: 50% !important; }
+    &.w55 { max-width: 55% !important; }
+    &.w60 { max-width: 60% !important; }
+    &.w65 { max-width: 65% !important; }
+    &.w70 { max-width: 70% !important; }
+    &.w75 { max-width: 75% !important; }
+    &.w80 { max-width: 80% !important; }
+    &.w85 { max-width: 85% !important; }
+    &.w90 { max-width: 90% !important; }
+    &.w95 { max-width: 95% !important; }
+    &.w100 { max-width: 100% !important; }
+  }
+}
+
+// IMAGES WITH CAPTIONS OFF TO THE SIDES
+
+@media (min-width: 640px) {
+  .node-content .field-image {
+    &.caption-left,
+    &.caption-right {
+      display: flex;
+
+      a {
+        display: block;
+        max-width: 76%;
+      }
+
+      .caption {
+        display: block;
+        max-width: 21%;
+        margin-top: 0;
+        padding-top: 1rem;
+        border-top: 1px solid @base_border_color;
+      }
+    }
+
+    &.caption-left {
+      flex-direction: row-reverse;
+
+      .caption {
+        margin-left: 0;
+        margin-right: 3%;
+        text-align: right;
+      }
+    }
+
+    &.caption-right {
+      .caption {
+        margin-right: 0;
+        margin-left: 3%;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// =============================================================================
+// SITE BRANDING
+// =============================================================================
+
+.branding {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .name,
+  .slogan,
+  .mission {
+    display: none;
+  }
+
+  // logo
+  .logo {
+    a {
+      display: block;
+      line-height: 0;
+
+      &.focus-visible {
+        background-color: @a11y-bg--hover;
+        outline: 0;
+      }
+    }
+
+    img {
+      width: 292px;
+      height: 80px;
+    }
+  }
+}

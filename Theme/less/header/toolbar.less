@@ -1,0 +1,117 @@
+// =============================================================================
+// TOOLBAR
+// =============================================================================
+
+.toolbar {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: -16px;
+  text-align: right;
+  font-size: 0;
+  white-space: nowrap;
+
+  button {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: @header-heights[mobile];
+    padding: 0;
+    border: none;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    overflow: hidden;
+    box-shadow: none;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    color: @a11y-grey;
+
+    &:before {
+      .theme-font();
+
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 24px;
+      padding: 12px;
+      border-radius: 100%;
+      transition: 0.2s ease-out;
+    }
+
+    &:hover,
+    &.focus-visible {
+      color: @a11y-grey--hover;
+
+      &:before {
+        background: @a11y-bg--hover;
+      }
+    }
+
+    &:active {
+      &:before {
+        background: @a11y-bg--active;
+      }
+    }
+
+    &.menu-icon:before {
+      content: @theme-icons[menu];
+    }
+
+    .menu-active &.menu-icon:before {
+      content: @theme-icons[close];
+    }
+
+    &.search-icon:before {
+      content: @theme-icons[search];
+    }
+  }
+
+  // Hide from the search/find pages of the site
+  button.search-icon {
+    .section-find & {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    button.search-icon {
+      display: none;
+    }
+  }
+
+  @media @tablet-down {
+    button.search-icon {
+      transition: all 0.2s ease-out;
+
+      .menu-active & {
+        margin-right: -48px;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+
+  @media @desktop {
+    top: 10px;
+    right: -10px;
+
+    button {
+      height: @header-heights[desktop] / 2;
+
+      &.search-icon {
+        .menu-active &:before {
+          content: @theme-icons[close];
+        }
+      }
+
+      &.menu-icon {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+// =============================================================================
+// TABLES
+// =============================================================================
+
+.node-content {
+  .table-responsive {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background-color: white;
+
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    border: 0;
+  }
+
+  thead {
+    border-bottom: 0;
+
+    th {
+      vertical-align: bottom;
+      text-align: inherit;
+      padding-right: 0;
+    }
+  }
+
+  tbody {
+    border-top: 0;
+  }
+
+  th,
+  td {
+    padding: 1.2rem;
+    vertical-align: top;
+  }
+
+  th {
+    border: 1px solid @C1;
+    background-color: @C1;
+    color: white;
+  }
+
+  td {
+    border: 1px solid @base_border_color;
+  }
+}

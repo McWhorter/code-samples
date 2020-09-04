@@ -1,0 +1,146 @@
+// =============================================================================
+// ALIGNMENT
+// =============================================================================
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+// =============================================================================
+// COLUMNS CLASS LIBRARY
+// =============================================================================
+
+.two-columns,
+.three-columns,
+.four-columns {
+  clear: both;
+}
+
+@media (min-width: 640px) {
+  .two-columns,
+  .three-columns,
+  .four-columns {
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .two-columns > *,
+  .three-columns > *,
+  .four-columns > * {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .two-columns > * {
+    flex: 1 0 percentage(1/2);
+  }
+
+  .three-columns > * {
+    flex: 1 0 percentage(1/3);
+  }
+
+  .four-columns > * {
+    flex: 1 0 percentage(1/4);
+  }
+
+  // Columns with lines
+
+  .two-columns,
+  .three-columns,
+  .four-columns {
+    &.lines {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    &.lines > * {
+      padding-left: 21px;
+      padding-right: 19px;
+    }
+
+    &.lines > *:not(:first-child) {
+      border-left: 1px solid #ccc;
+    }
+  }
+}
+
+// =============================================================================
+// BLOCK AND PULL QUOTES
+// =============================================================================
+
+blockquote {
+  @media (min-width: 640px) {
+    &.left,
+    &.right {
+      width: 25%;
+    }
+
+    &.left {
+      float: left;
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    &.right {
+      float: right;
+      margin-right: 0;
+      margin-left: 30px;
+    }
+  }
+}
+
+// =============================================================================
+// TABLES
+// =============================================================================
+
+.node-content table {
+  // Remove the stripes if they're not needed
+  &.no-stripes tbody {
+    td {
+      padding: 6px 0;
+    }
+
+    tr.odd,
+    tr:nth-child(odd),
+    tr.even,
+    tr:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+
+  // Properly aligning a simple key/value data table
+  &.key-value-data {
+    tbody {
+      td:first-child {
+        text-align: left;
+      }
+
+      td:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// GROUPING
+// =============================================================================
+
+.grouping {
+  margin: 1em 0;
+  padding: 0 1em;
+  border-radius: 4px;
+  border: 1px solid @base_border_color;
+}

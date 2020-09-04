@@ -1,0 +1,107 @@
+// ============================================================================
+// Admin related styling
+// ============================================================================
+
+body {
+  &.user-1,
+  &.admin-menu {
+    margin-top: 0 !important;
+    border-top: 20px solid black;
+    padding-bottom: 0;
+
+    // Offset page to make room for commands bar on bottom.
+    .page {
+      border-bottom: 30px solid #eee;
+    }
+  }
+}
+
+// Make sure admin block level links aren't accessible if inactive.
+.block-controls-wrapper {
+  .block-controls {
+    visibility: hidden;
+  }
+
+  body.show-vblocks .with-block-editing & {
+    &.show-block-controls .block-controls {
+      visibility: inherit;
+    }
+  }
+}
+
+// Allow the thumbnail images to display bigger on the manage content page
+
+.admin-content .views-field-field-image-fid img {
+  max-width: none;
+}
+
+// CKEditor
+
+body.cke_editable {
+  margin: 0;
+  padding: 10px;
+  font-family: @F1;
+  font-size: @base_font_size;
+  line-height: @base_line_height;
+}
+
+// Better control images appearing on a reorder page.
+
+form[action*='/tblock/order'] .views-field-field-image-fid a.imagecache {
+  display: block;
+  overflow: hidden;
+  max-width: 75px;
+  max-height: 75px;
+}
+
+// Force menu admin controls to be layered above positioned elements
+
+.add-term,
+.edit-term {
+  z-index: 1;
+}
+
+// Content zones block names
+
+.block-name {
+  font-size: 12px;
+}
+
+// Fixed table headings
+
+table.sticky-header {
+  z-index: 1;
+  background-color: white;
+}
+
+// Helps manipulates dd_hover to work with custom templates.
+
+.dd-hover-help {
+  position: relative;
+
+  .node {
+    position: static;
+    margin-bottom: 0;
+    overflow: inherit;
+    min-width: 0;
+  }
+
+  .dd-hover-expand {
+    top: 0;
+  }
+
+  &:hover .dd-hover-expand {
+    visibility: visible;
+  }
+}
+
+// Helps unpublished state of nodes using custom templates and improves the default unpublished state.
+
+.node-unpublished {
+  opacity: 0.5;
+  background-color: rgba(226, 83, 82, 0.25);
+
+  &:hover {
+    opacity: 1;
+  }
+}

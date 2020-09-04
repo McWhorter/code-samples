@@ -1,0 +1,26 @@
+// =============================================================================
+// READ MORE LINKS
+// =============================================================================
+
+.link-read-more {
+  a {
+    color: @C1;
+
+    &:after {
+      .dd-templates-font();
+
+      display: inline-block;
+      vertical-align: text-bottom;
+      content: @chevron-right-bold;
+      transition: transform 0.15s ease-in-out;
+    }
+
+    &:hover {
+      color: @C2;
+
+      &:after {
+        transform: translateX(0.1em);
+      }
+    }
+  }
+}

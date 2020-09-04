@@ -1,0 +1,101 @@
+/* stylelint-disable property-no-unknown */
+// =============================================================================
+// THEME VARIABLES
+// =============================================================================
+
+// Color Palatte
+@blue-light: #007a9f;
+@blue-dark: #033d5e;
+
+// Theme Colors
+@C1: @blue-light;
+@C2: @blue-dark;
+
+// Accessible defaults
+@a11y-grey: #757575;
+@a11y-grey--hover: #1d1d1d;
+@a11y-bg--hover: #f2f2f2;
+@a11y-bg--active: #e3e3e3;
+
+// Flyout background color
+@flyout-bg: @C2;
+
+// Term navigation dropdown background color.
+@term-nav-bg: @C2;
+
+// Base Font Stacks
+@font_base: Lato, Helvetica, "Helvetica Neue", Arial, sans-serif;
+@font_mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Font mapping
+@F1: @font_base;
+
+// Base Font Size
+@base_font_size: 1.6rem;
+@base_line_height: 1.5;
+
+// Base Text Color
+@base_text_color: #1d1d1d;
+
+// Base Border Color
+@base_border_color: #ccc;
+
+// Post bottom margin
+@post-bottom-margin: 35px;
+
+// Default sidebar widths
+@sidebar-left-width: 25%;
+@sidebar-right-width: 25%;
+
+// Default top/bottom gutters
+@standard-gutter: 35px;
+@gutter-top-height: 35px;
+@gutter-bottom-height: 35px;
+
+// Max width of content
+@max-width: @max-width-layout;
+
+// Header heights at various breakpoints.
+@header-heights: {
+  mobile: @mobile-header-height;
+  tablet: @tablet-header-height;
+  desktop: @desktop-header-height;
+}
+
+// Gutters relative to each breakpoint.
+@gutters: {
+  base: @base-gutter;
+  mobile: @mobile-gutter;
+  tablet: @tablet-gutter;
+  desktop: @desktop-gutter;
+  desktop-xl: @desktop-xl-gutter;
+}
+
+// Breakpoints map.
+@breakpoints: {
+  mobile: @mobile-breakpoint;
+  tablet: @tablet-breakpoint;
+  desktop: @desktop-breakpoint;
+  desktop-xl: @desktop-xl-breakpoint;
+}
+
+// [min] Media Queries created from the `@breakpoints` map.
+@mobile: ~'(min-width:' @breakpoints[mobile] ~')';
+@tablet: ~'(min-width:' @breakpoints[tablet] ~')';
+@desktop: ~'(min-width:' @breakpoints[desktop] ~')';
+@desktop-xl: ~'(min-width:' @breakpoints[desktop-xl] ~')';
+
+// [max] Media Queries created from the `min` versions above.
+@mobile-down: ~'(max-width:' (@breakpoints[tablet] - 1) ~')';
+@tablet-down: ~'(max-width:' (@breakpoints[desktop] - 1) ~')';
+@desktop-down: ~'(max-width:' (@breakpoints[desktop-xl] - 1) ~')';
+
+// [only] Media Queries based on combinations of the `min` and `max` values.
+@mobile-only: @mobile-down;
+@tablet-only: @tablet ~'and' @tablet-down;
+@desktop-only: @desktop ~'and' @desktop-down;
+
+// Asset paths.
+@theme_path: @theme-path;
+@faviconPath: @favicon-path;
+@imgPath: @img-path;

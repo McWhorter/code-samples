@@ -1,0 +1,99 @@
+// =============================================================================
+// KEEP ICON FONTS STANDARD
+// =============================================================================
+
+.icon-font-basics(@name) {
+  font-family: @name !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// =============================================================================
+// TEMPLATES FONT
+// =============================================================================
+
+@import 'https://d1azc1qln24ryf.cloudfront.net/66770/DDTemplates/style-cf.css?g8dsw';
+
+.dd-templates-font {
+  .icon-font-basics('dd-templates');
+}
+
+.dd-templates-font() {
+  &:extend(.dd-templates-font);
+}
+
+// =============================================================================
+// CHEVRONS
+// =============================================================================
+
+// Light
+@chevron-left-light:   "\e100";
+@chevron-right-light:  "\e101";
+@chevron-up-light:     "\e102";
+@chevron-down-light:   "\e103";
+// Normal
+@chevron-left-normal:  "\e200";
+@chevron-right-normal: "\e201";
+@chevron-up-normal:    "\e202";
+@chevron-down-normal:  "\e203";
+// Medium
+@chevron-left-medium:  "\e300";
+@chevron-right-medium: "\e301";
+@chevron-up-medium:    "\e302";
+@chevron-down-medium:  "\e303";
+// Bold
+@chevron-left-bold:    "\e400";
+@chevron-right-bold:   "\e401";
+@chevron-up-bold:      "\e402";
+@chevron-down-bold:    "\e403";
+// Bolder
+@chevron-left-bolder:  "\e500";
+@chevron-right-bolder: "\e501";
+@chevron-up-bolder:    "\e502";
+@chevron-down-bolder:  "\e503";
+
+// =============================================================================
+// ATTACHMENTS
+// =============================================================================
+
+// Icons
+@attachments-link:            "\e600";
+@attachments-file-html:       "\e601";
+@attachments-file-css:        "\e602";
+@attachments-file-xml:        "\e603";
+@attachments-file-pdf:        "\e604";
+@attachments-file-word:       "\e605";
+@attachments-file-excel:      "\e606";
+@attachments-file-powerpoint: "\e607";
+@attachments-image:           "\e608";
+@attachments-film:            "\e609";
+@attachments-music:           "\e610";
+@attachments-file-zip:        "\e611";
+@attachments-console:         "\e612";
+@attachments-speaker:         "\e613";
+@attachments-external:        "\e614";
+
+// =============================================================================
+// SOCIAL
+// =============================================================================
+
+@social-share-facebook:   "\e700";
+@social-share-twitter:    "\e701";
+@social-share-linkedin:   "\e702";
+@social-share-googleplus: "\e703";
+@social-share-youtube:    "\e704";
+@social-share-instagram:  "\e705";
+@social-share-flickr:     "\e706";
+@social-share-pinterest:  "\e707";
+
+// =============================================================================
+// DD TEMPLATES MISC
+// =============================================================================
+
+@dd-templates-play:      "\e900";
+@dd-templates-slideshow: "\e901";

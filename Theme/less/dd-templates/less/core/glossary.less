@@ -1,0 +1,59 @@
+// =============================================================================
+// GLOSSARY
+// =============================================================================
+
+.lexicon-links {
+  font-size: 0;
+  background-color: transparent;
+  text-align: left;
+
+  a {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 8px 11px 5px;
+    border: 1px solid @C1;
+    border-radius: 4px;
+    color: @C1;
+    background-color: transparent;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: white;
+      border-color: rgb(76, 93, 111);
+      background-color: rgb(76, 93, 111);
+    }
+  }
+
+  .lexicon-alphabar-instructions {
+    font-size: 14px;
+  }
+}
+
+.lexicon-list {
+  margin-top: 30px;
+
+  a[id*=letter_] {
+    font-size: 2em;
+  }
+
+  dl {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+  }
+
+  dt {
+    padding: 5px 10px;
+    font-weight: bold;
+    background: lighten(black, 66%);
+    color: white;
+  }
+
+  dd {
+    margin: 0;
+    padding: 1px 10px;
+    border: 1px solid #eee;
+    border-top: none;
+  }
+}

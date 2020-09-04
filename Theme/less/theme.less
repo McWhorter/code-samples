@@ -1,0 +1,53 @@
+// =============================================================================
+// THEME
+// =============================================================================
+
+// Shared JS Variables.
+require('../config').variables;
+
+// Theme Variables
+@import 'variables';
+
+// DD Templates
+@import '~@digitaldeployment/dd-templates/less/dd-templates';
+
+// DD Templates Config
+@import 'dd-templates-config';
+
+// Core
+@import 'core/fonts';
+@import 'core/loader';
+@import 'core/gallery';
+@import 'core/iconography';
+
+// Flickity
+@import (less) '~flickity/dist/flickity.css';
+@import (less) '~flickity-fade/flickity-fade.css';
+
+// Modaal
+@import (less) '~modaal/dist/css/modaal.css';
+@import 'core/modaal';
+
+// Page Regions
+@import 'regions/page';
+@import 'regions/header';
+@import 'regions/footer';
+
+// Header Specific Blocks
+@import 'header/branding';
+@import 'header/navigation';
+@import 'header/toolbar';
+@import 'header/search';
+
+// Footer Specific Blocks
+@import 'footer/links';
+
+// Blocks
+@import 'blocks/pods';
+@import 'blocks/banner';
+@import 'blocks/term-navigation';
+
+// Templates
+@import 'templates/home';
+@import 'templates/sitemap';
+@import 'templates/calendar';

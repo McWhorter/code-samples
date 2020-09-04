@@ -1,0 +1,86 @@
+// =============================================================================
+// DD SOCIAL SHARE BLOCK
+// =============================================================================
+
+.block-dd_social {
+  margin-bottom: @post-bottom-margin;
+
+  .block-title {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .item-list ul li {
+    margin: 0;
+    list-style: none;
+  }
+
+  span.ext {
+    display: none;
+  }
+
+  .social {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 5px;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out;
+    background-color: #757575;
+    color: white;
+
+    &:after {
+      &:extend(.dd-templates-font);
+
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+  }
+
+  a.social-facebook {
+    &:after {
+      content: @social-share-facebook;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #3c5a9b;
+    }
+  }
+
+  a.social-linkedin {
+    &:after {
+      content: @social-share-linkedin;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #1879b3;
+    }
+  }
+
+  a.social-twitter {
+    &:after {
+      content: @social-share-twitter;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #30aade;
+    }
+  }
+}

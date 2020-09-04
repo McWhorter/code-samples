@@ -1,0 +1,51 @@
+// =============================================================================
+// CODE
+// Bootstrap Inspired
+// =============================================================================
+
+pre,
+kbd,
+code,
+samp {
+  font-family: @font_mono;
+}
+
+code {
+  word-break: break-word;
+  font-size: 87.5%;
+  color: #e83e8c;
+
+  a > & {
+    color: inherit;
+  }
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  background-color: @C1;
+  color: white;
+
+  kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none;
+  }
+}
+
+pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+
+  code {
+    word-break: normal;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+samp {
+  font-size: 1em;
+}

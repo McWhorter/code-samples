@@ -1,0 +1,28 @@
+// =============================================================================
+// UI DIALOG
+// @info This just needs to be completely independent from inline CSS. Let's
+// move to modern CSS to manage the dialog display.
+// =============================================================================
+
+.ui-dialog {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 90% !important;
+  height: auto !important;
+  max-height: 90%;
+  box-sizing: border-box;
+  overflow: auto !important;
+  font-size: @base_font_size;
+  transform: translate3d(-50%, -50%, 0);
+  backface-visibility: hidden;
+
+  .ui-dialog-content {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @media (min-width: 640px) {
+    width: 600px !important;
+  }
+}

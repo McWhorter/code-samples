@@ -1,0 +1,114 @@
+// =============================================================================
+// PODS
+// =============================================================================
+
+.pods {
+  color: white;
+
+  .views-row {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+  }
+
+  .node {
+    height: 100%;
+    margin-bottom: 0;
+    transition: background-color 0.2s ease-out;
+    background-color: @C1;
+    overflow: hidden;
+
+    &:focus-within {
+      background-color: @C2;
+    }
+  }
+
+  .field-image {
+    margin-bottom: 0;
+
+    a {
+      outline: none;
+    }
+  }
+
+  .node-header a {
+    padding: 2rem;
+    outline: none;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: inherit;
+  }
+
+  .subtitle {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: @base_font_size;
+    line-height: 1.4;
+    color: inherit;
+  }
+
+  label {
+    color: white;
+  }
+
+  .node-webform {
+    position: relative;
+    z-index: 3;
+    margin-top: -2rem;
+    padding: 0 2rem 2rem;
+
+    fieldset,
+    .form-submit,
+    input[type=text] {
+      width: 100%;
+    }
+
+    .form-submit {
+      border-radius: 0.5rem;
+    }
+  }
+
+  .node:hover {
+    background-color: @C2;
+  }
+
+  @media (min-width: 500px) {
+    .view-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -2rem;
+    }
+
+    .views-row {
+      padding-left: 2rem;
+      flex: 0 0 percentage(1/2);
+    }
+  }
+
+  @media @tablet {
+    .views-row {
+      flex: 0 0 percentage(1/3);
+    }
+  }
+
+  @media @desktop {
+    &.pods-right {
+      .view-content {
+        display: block;
+      }
+
+      .views-row {
+        width: 100%;
+      }
+    }
+
+    &.pods-below {
+      margin-top: 35px;
+      border-top: 1px solid @base_border_color;
+      padding-top: 70px;
+    }
+  }
+}

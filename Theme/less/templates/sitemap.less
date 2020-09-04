@@ -1,0 +1,37 @@
+// =============================================================================
+// SITEMAP
+// =============================================================================
+
+#sitemap {
+  opacity: 0;
+  transition: opacity 0.25s linear;
+
+  &.ready {
+    opacity: 1;
+  }
+
+  li {
+    clear: left;
+    list-style: none;
+  }
+
+  ul ul {
+    padding-left: 24px;
+  }
+
+  .sitemap-rss {
+    float: left;
+    margin-top: 2px;
+  }
+
+  .menu-link {
+    display: inline-block;
+    padding: 2px;
+    line-height: 1.5em;
+    text-decoration: none;
+  }
+
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+}

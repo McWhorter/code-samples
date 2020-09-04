@@ -1,0 +1,42 @@
+// =============================================================================
+// UNDERLINE HELPER
+// =============================================================================
+
+.underline(@height: 0.2rem, @color: @blue4) {
+  display: inline;
+  background-image: linear-gradient(to right, @color, @color);
+  background-position: left 1.04em;
+  background-repeat: no-repeat;
+  background-size: 0 @height;
+  transition: all 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-size: 100% @height;
+  }
+}
+
+.underline-title(@height: 0.2rem, @color: @blue4) {
+  .title {
+    display: inline;
+    background-image: linear-gradient(to right, @color, @color);
+    background-position: left 1.04em;
+    background-repeat: no-repeat;
+    background-size: 0 @height;
+    transition: all 0.2s ease-out;
+  }
+
+  & + span.ext {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .title {
+      background-size: 100% @height;
+    }
+  }
+}

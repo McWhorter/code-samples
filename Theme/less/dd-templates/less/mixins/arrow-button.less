@@ -1,0 +1,48 @@
+// ============================================================================
+// Arrow / Chevron Button
+// ============================================================================
+
+.arrow-button(@button-size: 44px, @icon-size: 14px, @icon-thickness: 2px, @direction: down) {
+  @offset: (@button-size - @icon-size) / 2 + (@icon-size / 4 / 2);
+
+  position: relative;
+  width: @button-size;
+  height: @button-size;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: @offset;
+    left: @offset;
+    transition: inherit;
+    background-color: currentColor;
+  }
+
+  &:before {
+    width: @icon-thickness;
+    height: @icon-size;
+  }
+
+  &:after {
+    width: @icon-size;
+    height: @icon-thickness;
+  }
+
+  & when (@direction = up) {
+    transform: rotate(45deg);
+  }
+
+  & when (@direction = right) {
+    transform: rotate(135deg);
+  }
+
+  & when (@direction = down) {
+    transform: rotate(225deg);
+  }
+
+  & when (@direction = left) {
+    transform: rotate(315deg);
+  }
+}

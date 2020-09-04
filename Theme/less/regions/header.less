@@ -1,0 +1,84 @@
+// =============================================================================
+// PAGE HEADER
+// =============================================================================
+
+.page-header {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: @F1;
+
+  .layout {
+    position: relative;
+  }
+
+  .header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @header-heights[mobile];
+    transition: 0.2s ease-out;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  &.not-top .header {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media @tablet-down {
+    height: @header-heights[mobile];
+    transition: 0.5s @easeOutExpo;
+
+    &.unlocked {
+      transform: translateY(-100%);
+    }
+
+    .menu-active & {
+      height: 100vh;
+
+      &.unlocked {
+        transform: translateY(0);
+      }
+    }
+
+    .header,
+    .flyout {
+      position: fixed;
+    }
+
+    .flyout {
+      z-index: 1;
+      top: @header-heights[mobile];
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
+      -webkit-overflow-scrolling: touch;
+      visibility: hidden;
+      background-color: @C2;
+      opacity: 0;
+
+      .menu-active & {
+        bottom: 0;
+        padding-top: 60px;
+        padding-bottom: 100px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        visibility: inherit;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media @desktop {
+    .header {
+      height: @header-heights[desktop];
+    }
+  }
+}

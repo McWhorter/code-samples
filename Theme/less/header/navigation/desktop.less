@@ -1,0 +1,144 @@
+// =============================================================================
+// DESKTOP NAVIGATION MENU
+// =============================================================================
+
+@media @desktop {
+  position: absolute;
+  z-index: 3;
+  top: @header-heights[desktop] - 48px;
+  left: 0;
+  right: -1rem;
+  height: 0;
+  font-size: @base_font_size;
+
+  body.show-vblocks & {
+    & .block-controls {
+      position: absolute;
+      top: 3rem;
+      left: 0;
+    }
+
+    &.with-block-editing .block-controls-wrapper {
+      padding-top: 0;
+    }
+  }
+
+  .nice-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  li.depth-1 {
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+  }
+
+  a.menu-link {
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
+    font-size: @base_font_size;
+
+    &:hover,
+    &.focus-visible {
+      outline: 0;
+      text-decoration: underline;
+    }
+  }
+
+  li.depth-1:hover {
+    outline: 1px solid @a11y-bg--active;
+    outline-offset: -1px;
+  }
+
+  a.depth-1 {
+    line-height: 48px;
+  }
+
+  li.menuparent {
+    > a.depth-1 {
+      width: calc(100% - 3.8rem);
+    }
+  }
+
+  .navigation__toggle {
+    .plusminus-button(1.6rem, 0.9rem, 0.1rem);
+
+    margin-left: 4px;
+    border-radius: 100%;
+    background-color: transparent;
+    transition: 0.2s ease-out;
+    color: @a11y-grey;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: @a11y-grey--hover;
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // Default collapsed submenu style
+
+  .navigation__submenu {
+    min-width: 20rem;
+    max-width: 30rem;
+    margin: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    text-align: left;
+    background-color: @a11y-bg--hover;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+
+    button {
+      margin-right: 1rem;
+    }
+
+    &.depth-2 {
+      position: absolute;
+      z-index: 1;
+      top: 90%;
+      right: 0;
+      outline: 1px solid @a11y-bg--active;
+      outline-offset: -1px;
+    }
+
+    ul {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  // Expanded submenu
+
+  [aria-expanded="true"] + ul {
+    height: auto;
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition-duration: 0.35s;
+    overflow: visible;
+
+    &.depth-2 {
+      top: 100%;
+    }
+  }
+
+  // Expanded and nested submenu
+
+  ul.depth-2 [aria-expanded="true"] + ul {
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+  }
+
+  ul.depth-2 .navigation--active + li {
+    padding-top: 2rem;
+  }
+}

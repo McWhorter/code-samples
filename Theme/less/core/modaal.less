@@ -1,0 +1,81 @@
+// =============================================================================
+// STYLING FOR THE MODAAL FUNCTIONALITY
+// =============================================================================
+
+.modaal-container {
+  font-size: @base_font_size;
+}
+
+.modaal-gallery-control {
+  border: 1px solid @a11y-grey;
+  background-color: hsla(0, 0%, 100%, 0.75);
+
+  &:after,
+  &:before {
+    top: 18px;
+    width: 2px;
+    height: 13px;
+    background-color: @a11y-grey;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: @C1;
+    background-color: @C1;
+
+    &:after,
+    &:before {
+      background-color: white;
+    }
+  }
+}
+
+.modaal-gallery-prev {
+  &:after {
+    margin-top: -4px;
+  }
+
+  &:before {
+    margin-top: 4px;
+  }
+
+  &:active {
+    transform: translateX(-10%) translateY(-50%);
+  }
+}
+
+.modaal-gallery-next {
+  &:before {
+    margin-top: -4px;
+  }
+
+  &:after {
+    margin-top: 4px;
+  }
+
+  &:active {
+    transform: translateX(10%) translateY(-50%);
+  }
+}
+
+.modaal-video-wrap {
+  margin: auto;
+}
+
+.modaal-messages {
+  .modaal-inner-wrapper {
+    vertical-align: top;
+    padding: @header-heights[desktop] 0;
+  }
+
+  .modaal-content-container {
+    padding: 0;
+  }
+
+  // Don't display the close icon within the messages.
+  .messages {
+    &:before {
+      display: none;
+    }
+  }
+}

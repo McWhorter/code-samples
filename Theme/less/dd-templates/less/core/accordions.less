@@ -1,0 +1,81 @@
+// =============================================================================
+// ACCORDIONS
+// =============================================================================
+.accordion-heading {
+  position: relative;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid @base_border_color;
+
+  h3& {
+    font-size: 2.4rem;
+  }
+
+  h4& {
+    font-size: 2.1rem;
+  }
+
+  a {
+    display: block;
+
+    .icon {
+      .plusminus-button(30px, 16px, 2px);
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border-radius: 100%;
+      transition: 0.2s ease-out;
+      border: 0.2rem solid transparent;
+      transform: translateY(-50%);
+      color: inherit;
+    }
+
+    &:hover,
+    &.focus-visible {
+      .icon {
+        background-color: @a11y-bg--hover;
+      }
+    }
+
+    &:active {
+      .icon {
+        background-color: @a11y-bg--active;
+      }
+    }
+  }
+
+  &.active {
+    a {
+      border-bottom-color: transparent;
+
+      .icon:after {
+        top: 50%;
+        height: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+
+  .link-text {
+    display: block;
+    margin-right: 4rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.accordion-content {
+  *:first-child {
+    margin-top: 0;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+  }
+}

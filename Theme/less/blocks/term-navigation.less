@@ -1,0 +1,98 @@
+// =============================================================================
+// TERM NAVIGATION MENU
+// =============================================================================
+
+.term-navigation {
+  transition: opacity 0.3s 0.3s linear;
+  opacity: 0;
+
+  &.ready {
+    opacity: 1;
+  }
+
+  a {
+    border-bottom: none;
+
+    &.depth-1 {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: normal;
+      color: currentColor;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+      flex: 1 1 auto;
+      width: 0.1rem;
+    }
+
+    a.menu-link {
+      display: block;
+      padding: 1rem 0;
+      font-size: 1.8rem;
+      transition: 0.2s;
+      color: @base_text_color;
+
+      &.focus-visible {
+        outline: 0;
+        text-decoration: underline;
+        z-index: 3;
+      }
+    }
+
+    a.depth-1 {
+      padding: 0.5rem 0;
+      font-size: 1.8rem;
+    }
+
+    a.active {
+      font-weight: bold;
+      color: @C1;
+    }
+
+    ul {
+      min-width: 100%;
+      box-sizing: border-box;
+      min-height: inherit !important;
+    }
+  }
+
+  // Manage tabbable elements leveraging the aria-hidden attribute setting.
+  .term-navigation__submenu[aria-hidden="true"] {
+    visibility: hidden;
+  }
+
+  // Menu toggle button
+
+  .term-navigation__toggle {
+    .reboot-button();
+
+    z-index: 3;
+    font-size: 0;
+    transition: 0.2s ease-out;
+
+    &[aria-expanded=true]:after {
+      top: 50%;
+      height: 0;
+      opacity: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  @import 'term-navigation/mobile';
+  @import 'term-navigation/desktop';
+}

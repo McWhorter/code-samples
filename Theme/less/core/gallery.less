@@ -1,0 +1,220 @@
+// =============================================================================
+// PHOTO GALLERY
+// =============================================================================
+
+.photo-gallery {
+  .node-image,
+  .node-upper-image,
+  .node-content & {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+
+    &.ready {
+      opacity: 1;
+    }
+  }
+
+  .node-item .field-image {
+    margin: 0;
+  }
+
+  // Margin the top just as if it were a paragraph
+
+  .node-image {
+    margin-top: 1em;
+  }
+
+  // Dynamically created container for all the slides
+
+  .flickity-viewport {
+    background-color: #171a1b;
+  }
+
+  // Field Image
+
+  .field-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    float: none !important;
+    width: 100%;
+    max-width: none !important;
+    margin: 0 !important;
+
+    .caption {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      font-size: @base_font_size;
+      transition: 0.2s ease-out;
+      transform: translateY(100%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      opacity: 0;
+
+      @media (min-width: 640px) {
+        display: block;
+      }
+    }
+
+    &:not(.is-selected) {
+      opacity: 0 !important;
+    }
+
+    &.is-selected {
+      height: 100%;
+
+      .caption {
+        transform: translateY(0);
+        transition-delay: 0.5s;
+        opacity: 1;
+      }
+
+      a {
+        display: block;
+        width: auto;
+        max-width: 100%;
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Slider next/prev arrows
+
+  .flickity-prev-next-button {
+    border: 1px solid @a11y-grey;
+    transition: 0.2s ease-out;
+    color: @a11y-grey;
+
+    &.previous {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:focus,
+    &:hover {
+      position: absolute;
+      border-color: @C1;
+      background-color: @C1;
+      color: white;
+    }
+
+    &.previous:active {
+      transform: translateX(-10%) translateY(-50%);
+    }
+
+    &.next:active {
+      transform: translateX(10%) translateY(-50%);
+    }
+  }
+
+  // Slider pager dots
+
+  .flickity-page-dots {
+    position: relative;
+    bottom: 0;
+    margin: 1em 0 1.5em;
+    padding: 0 3.6rem;
+    text-align: center;
+    box-sizing: border-box;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+      transition: 0.25s ease-in-out;
+
+      &:active {
+        transform: scale(0.5);
+      }
+    }
+
+    .dot {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 3px;
+      box-sizing: border-box;
+      border: 1px solid @a11y-grey;
+      background-color: transparent;
+      opacity: 1;
+
+      &:hover,
+      &.focus-visible {
+        border-color: @C1;
+        background-color: @C1;
+      }
+
+      &.is-selected {
+        border-color: @a11y-grey;
+        background-color: @a11y-grey;
+        cursor: default;
+      }
+    }
+  }
+
+  .button--play-pause {
+    .reboot-button();
+
+    .play-pause-icon {
+      width: 2.1rem;
+      height: 2.1rem;
+      fill: @a11y-grey;
+    }
+
+    .play,
+    .pause {
+      transition: 0.25s ease-in-out;
+    }
+
+    .pause {
+      opacity: 0;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:hover,
+    &.focus-visible {
+      .play-pause-icon {
+        fill: @C1;
+      }
+    }
+  }
+
+  .playing {
+    .button--play-pause {
+      .play {
+        opacity: 0;
+      }
+
+      .pause {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media @tablet-down {
+    // Don't display arrows on mobile.
+    .flickity-prev-next-button {
+      display: none;
+    }
+  }
+}

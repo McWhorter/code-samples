@@ -1,0 +1,115 @@
+// =============================================================================
+// TERM NAVIGATION MENU: DESKTOP
+// =============================================================================
+
+@media @desktop {
+  .block-title {
+    margin-bottom: 1.5rem;
+    padding: 0;
+    border: 0;
+    color: @base_text_color;
+
+    button {
+      display: none;
+    }
+
+    a,
+    span {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      color: @base_text_color;
+    }
+
+    a.active,
+    a.active span {
+      color: @C1;
+    }
+  }
+
+  ul,
+  li {
+    position: relative;
+  }
+
+  ul {
+    z-index: 1;
+  }
+
+  li {
+    a.menu-link {
+      position: relative;
+      z-index: 2;
+      padding: 0.5rem 0;
+      font-size: 1.6rem;
+      background-color: white;
+
+      &:hover,
+      &.focus-visible {
+        outline: 0;
+        text-decoration: underline;
+      }
+    }
+
+    a.depth-2 { padding-left: 1.25rem; }
+    a.depth-3 { padding-left: 2rem; }
+    a.depth-4 { padding-left: 3rem; }
+    a.depth-5 { padding-left: 4rem; }
+  }
+
+  li ul {
+    min-width: 100%;
+    box-sizing: border-box;
+    min-height: inherit !important;
+    transition: 0.5s @easeOutExpo;
+  }
+
+  ul.depth-2 {
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 4;
+      top: 0.5rem;
+      left: 0;
+      bottom: 0.5rem;
+      width: 0.1rem;
+      background-color: #eee;
+    }
+  }
+
+  .term-navigation__toggle {
+    .plusminus-button(2.5rem, 1.1rem, 0.1rem);
+
+    border-radius: 100%;
+    background-color: transparent;
+    color: inherit;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+
+    &:hover,
+    &.focus-visible {
+      background-color: @a11y-bg--hover;
+    }
+
+    &:active {
+      background-color: @a11y-bg--active;
+    }
+
+    & + ul {
+      height: 3.4rem;
+      margin-top: -3.4rem;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    &[aria-expanded=true] + ul {
+      height: auto;
+      margin-top: inherit;
+      overflow: visible;
+      opacity: 1;
+    }
+  }
+}

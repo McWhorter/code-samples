@@ -1,0 +1,33 @@
+// =============================================================================
+// FOOTER LINKS
+// =============================================================================
+
+.footer-links {
+  ul,
+  li {
+    list-style-type: none;
+  }
+
+  li {
+    a {
+      color: white;
+    }
+
+    .focus-visible {
+      outline-color: white;
+      outline-width: 1px;
+    }
+  }
+
+  @media @desktop {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -1rem;
+    }
+
+    li {
+      margin: 0 1rem;
+    }
+  }
+}
