@@ -4,9 +4,12 @@
 
 I was responsibile for the complete buildout of all structure, styling, and functionality implemented within each site listed below:
 
-- [Alameda County Employees’ Retirement Association](https://www.acera.org/)
 - [Old Sacramento Waterfront](https://www.oldsacramento.com/)
+- [Gemini Bio](https://www.gembio.com/)
+- [Alameda County Employees’ Retirement Association](https://www.acera.org/)
+- [Western City Magazine](https://www.westerncity.com/)
 - [New York City Employees’ Retirement System](https://www.nycers.org/)
+- [Los Angles City Employees’ Retirement System' ](https://www.lacers.org/)
 
 ## Code Samples
 
