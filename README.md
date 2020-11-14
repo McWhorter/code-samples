@@ -1,6 +1,10 @@
 ![Jason standing at the edge of the Pacific Ocean in Maui, Hawaii](./assets/images/Maui%20LinkedIn.png)
 
-# Welcome to the online portfolio of Jason McWhorter
+# Welcome
+
+My name is Jason and I'm a detail-oriented developer who has a passion for producing quality code used to power online tools and websites that look great and are intuitive to use.
+
+Below you can find some work samples I've assembled that I believe gives you a good perspective of my code practices, directory organization, overall knowledge, and ability to just see some of my work that I'm most proud of. Thanks for stopping by :) 
 
 ## Website Portfolio
 
