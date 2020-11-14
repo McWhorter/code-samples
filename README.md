@@ -21,6 +21,8 @@ I was responsibile for the complete buildout of all structure, styling, and func
 
 Below are small descriptions of each directory contained within this repository. Each gives a glimpse into the work you can expect from me and my typical organization of code, documenation of logic, and overall structure for which I use. Enjoy!
 
+--
+
 ### Adaptable Navigation Menu Component
 
 This navigation menu serves as both a vertical or horizontal orientation. It has other features which allow the visibility of submenus based on either hover or click interaction.
@@ -53,10 +55,37 @@ This component creates a toggle state to show/hide content based on user click i
 
 ---
 
+### Drupal 6 & 8
+
+I've created base themes from scratch for both Drupal 6 and 8. Below are some examples I feel demonstrate my capabilities with both creating custom Twig/PHP templates, as well as back-end logic in order to properly register them within each theme.
+
+#### Drupal 6
+
+Creating specific node and block markup is key in order to achieving many designs. I constructed a back-end system our team used in order to connect Drupal with each node, block, or view template desired. This gave the team lots of flexibility in addition to allowing us to repurpose templates cutting down on duplicated code. The result was an efficient and manageable way to create custom markup. This system was used on 30-40 websites.
+
+* [template.php](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.php), where all the magic happens :)
+* [template.ext.inc](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.ext.inc) Utility functions which support `template.php`
+
+#### Drupal 8
+
+Sidebar navigation is a key component for any large website. This menu gives the user the ability to quickly navigate and visual see any nested pages within the current section they're viewing on the website. Below is an example of one which features a toggle button which shows/hides the subitems on mobile/tablet viewports. Then on desktop, shows a typical sidebar navigation list.
+
+[Subnavigation Block twig template sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/subnavigation-block.html.twig)
+
+Behaviors play an intergral role in order to bring functionality to components on Drupal site. Below is an example of a simple accordion which leverages the [aria-tablist](https://github.com/mynamesleon/aria-tablist#readme) framework which adds accessibility support, functionality, and state management. 
+
+[Drupal 8 Javascript behavior sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/accordions.js)
+
+Displaying a Map or creating a link to a map is a typical need of many websites. Below is a Twig example which implements either a interactive map (iframe), static map, or a static link to an external map service.
+
+[Map output twig template code sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/simple-gmap-output.html.twig)
+
+---
+
 ### Style and Structure Example
 
 This is an example of my typical directory structure, code style, and code standards.
 
-![Sass](./assets/images/icon-sass.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/scss)
+![Sass](./assets/images/icon-sass.svg) [See my SCSS style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/scss)
 
-![{less}](./assets/images/icon-less.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
+![{less}](./assets/images/icon-less.svg) [See my {less} style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)

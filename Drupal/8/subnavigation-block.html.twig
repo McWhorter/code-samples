@@ -1,0 +1,50 @@
+<div class="subnavigation__heading">
+  {% set root_attributes = create_attribute({'class': [root_menu_item.isActive ? 'is_active']}) %}
+  <button id="subnavigation__toggle" class="subnavigation__toggle" aria-haspopup="true" aria-controls="subnavigation__menu">
+    <span class="visually-hidden">Toggle Subnavigation Menu</span>
+    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+      <rect class="top" x="30" y="34" width="40" height="4"></rect>
+      <rect class="middle" x="30" y="48" width="32" height="4"></rect>
+      <rect class="bottom" x="30" y="62" width="36" height="4"></rect>
+    </svg>
+  </button>
+  {{ link(root_menu_item.title.value, root_menu_item.link.uri, root_attributes) }}
+</div>
+
+{% import _self as menus %}
+{{ menus.menu_links(menu_items, attributes, 0) }}
+
+{% macro menu_links(menu_items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if menu_items %}
+    {% set depth = menu_level + 1 %}
+    {% set level = 'lv' ~ depth %}
+    {% if menu_level == 0 %}
+      <ul class="menu vertical subnavigation__menu" id="subnavigation__menu" aria-labelledby="subnavigation__toggle" tabindex="-1">
+    {% else %}
+      {% set submenu_classes = [
+        'menu',
+        level,
+      ] %}
+      <ul class="{{ submenu_classes|join(' ') }}">
+    {% endif %}
+    {% for item in menu_items %}
+      {% set item_classes = [
+        level,
+        item.in_active_trail ? 'active-trail',
+        item.is_expanded ? 'expanded',
+        item.is_collapsed ? 'collapsed',
+      ] %}
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {% set title %}
+          <span class="link-text">{{ item.title }}</span>
+        {% endset %}
+        {{ link(title, item.url, { 'class': level }) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, depth) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
