@@ -1,0 +1,48 @@
+// Recent Posts (News & Blogs)
+// -----------------------------------------------------------------------------
+
+.block--recent-news,
+.block--recent-blogs {
+  .recent-posts {
+    margin-left: 0;
+    list-style-type: none;
+  }
+
+  .recent-post {
+    margin: 1rem 0;
+
+    &:not(:first-child) {
+      padding-top: 1rem;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .views-field-created {
+      color: #797979;
+      font-size: rem-calc(15);
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .more-link {
+    a {
+      line-height: 1.9;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

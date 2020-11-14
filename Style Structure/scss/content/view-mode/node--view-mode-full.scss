@@ -1,0 +1,36 @@
+// Node View Mode - Full Content
+// -----------------------------------------------------------------------------
+
+.node--view-mode-full {
+  @include teaser($separator: false, $image-width: 50%, $prefix: '.page-content:first-child > ');
+
+  margin-bottom: 0;
+
+  .node-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem 0 0;
+    color: $a11y-text;
+    font-size: rem-calc(15);
+    list-style-type: none;
+
+    li:not(:first-child) {
+      &:before {
+        padding: 0 0.3em;
+        content: '/';
+      }
+    }
+
+    .related-profile {
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

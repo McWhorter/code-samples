@@ -1,0 +1,218 @@
+// =============================================================================
+// Grid Calendar
+// =============================================================================
+
+.calendar--grid {
+  table {
+    margin-bottom: 0;
+  }
+
+  tbody tr {
+    border-bottom: inherit;
+  }
+
+  .fc-toolbar {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+    .fc-left {
+      width: 50%;
+      order: 2;
+      margin-bottom: 20px;
+
+      @include breakpoint(md-down) {
+        width: 100%;
+      }
+    }
+
+    .fc-center {
+      width: 100%;
+      order: 1;
+      margin-bottom: 20px;
+
+      h2 {
+        float: none;
+      }
+    }
+
+    .fc-right {
+      display: flex;
+      width: 50%;
+      order: 2;
+      margin-bottom: 20px;
+
+      @include breakpoint(md-down) {
+        width: 100%;
+      }
+
+      & > .fc-button-group {
+        margin-left: auto;
+
+        @include breakpoint(md-down) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .fc-clear {
+      display: none;
+    }
+  }
+
+  .calendar-view-btn {
+    float: none;
+  }
+
+  .fc-content-skeleton {
+    thead {
+      border-bottom: 0;
+    }
+
+    tbody {
+      border-top: 0;
+    }
+
+    tr,
+    td {
+      border-bottom: 0;
+    }
+  }
+
+  .fc-button {
+    @extend .btn-outline-primary;
+
+    height: auto;
+    margin-bottom: 0;
+    background-color: transparent;
+    box-shadow: none;
+    line-height: 1.5;
+    text-shadow: none;
+
+    @include breakpoint(md-down) {
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &.fc-button-active {
+      background-color: $secondary-color;
+      cursor: default;
+    }
+
+    &.fc-button[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  .fc-head {
+    .fc-row:first-child table {
+      margin-bottom: 0;
+    }
+
+    .fc-day-header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0;
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .fc-body {
+    .fc-row {
+      border-top: 10px solid $primary-color;
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+
+  .fc {
+    .fc-row {
+      .fc-content-skeleton {
+        tr {
+          border-bottom: 0;
+        }
+
+        td {
+          border-color: #ddd;
+          border-bottom: none;
+
+          &.fc-today {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+
+    .fc-today {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .fc-day-top {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .fc-content {
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .fc-event {
+    padding: 5px;
+    background-color: hotpink !important;
+    color: white;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .fc-agendaWeek-view,
+  .fc-agendaDay-view {
+    .fc-slats tr:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .fc-day-grid-container {
+    height: auto !important;
+  }
+
+  .fc-unthemed td.fc-today {
+    background-color: #f0f0f0;
+  }
+
+  .fc-agendaWeek-view {
+    .fc-today {
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .fc-agendaDay-view {
+    .fc-today {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .fc-scroller {
+      height: auto !important;
+    }
+  }
+}

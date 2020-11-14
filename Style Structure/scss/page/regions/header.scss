@@ -1,0 +1,17 @@
+// =============================================================================
+// Page Header
+// =============================================================================
+
+.page-header {
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@import 'header/branding';
+@import 'header/search';
+@import 'header/main-navigation';
+@import 'header/toolbar';

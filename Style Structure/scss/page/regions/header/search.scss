@@ -1,0 +1,16 @@
+// =============================================================================
+// Site Search (Header)
+// =============================================================================
+
+.search__header {
+  padding-top: rem-calc(24);
+  margin-left: auto;
+
+  .form-actions {
+    margin: 0;
+  }
+
+  @include breakpoint(lg-down) {
+    display: none;
+  }
+}

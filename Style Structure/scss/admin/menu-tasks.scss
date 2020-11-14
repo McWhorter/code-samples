@@ -1,0 +1,23 @@
+// ============================================================================
+// Menu Local Tasks: Primary and Secondary Tabs
+// ============================================================================
+
+.block-local-tasks-block {
+  ul.menu {
+    li {
+      margin: 4px 2px;
+    }
+
+    a {
+      @include form-submit();
+
+      &.is-active {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        color: white;
+        cursor: default;
+        text-decoration: none;
+      }
+    }
+  }
+}

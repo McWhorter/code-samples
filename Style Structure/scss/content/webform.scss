@@ -1,0 +1,60 @@
+// =============================================================================
+// Webform Page
+// =============================================================================
+
+.webform-content {
+  .block-local-tasks-block {
+    padding: 0;
+  }
+
+  h1 {
+    margin: 1rem 0;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+
+  .form-wrapper,
+  .fieldset-wrapper {
+    width: 100%;
+  }
+
+  .fieldset-wrapper {
+    @include breakpoint(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & > .js-form-type-tel,
+      & > .js-form-type-email,
+      & > .js-form-type-select,
+      & > .js-form-type-datelist,
+      & > .js-form-type-textarea,
+      & > .js-form-type-textfield {
+        width: calc(50% - 1rem);
+        flex: 0 0 calc(50% - 1rem);
+      }
+
+      & > .js-form-type-webform-time {
+        width: calc(25% - 1.5rem);
+        flex: 0 0 calc(25% - 1.5rem);
+      }
+    }
+  }
+
+  .js-form-type-datelist {
+    @include breakpoint(lg) {
+      .container-inline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .js-form-item {
+        width: calc(33.33% - 1rem);
+        flex: 0 0 calc(33.33% - 1rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// =============================================================================
+// Pagination
+// =============================================================================
+
+.pagination {
+  text-align: center;
+
+  .pager__item {
+    border-radius: 100%;
+
+    &.pager__item--last,
+    &.pager__item--next {
+      border-radius: 4px;
+    }
+
+    a {
+      border-radius: inherit;
+      transition: 0.2s ease-out;
+    }
+
+    a:hover,
+    a:focus {
+      color: $primary-color;
+    }
+  }
+}

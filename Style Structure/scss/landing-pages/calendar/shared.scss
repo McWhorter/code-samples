@@ -1,0 +1,98 @@
+// =============================================================================
+// Calendar Shared Component Styling
+// =============================================================================
+
+.block-dd-calendar {
+  margin-top: var(--gap);
+
+  // Toolbar (list/grid calendar icons)
+  // ---------------------------------------------------------------------------
+
+  .toolbar {
+    justify-content: flex-end;
+    float: right;
+
+    a {
+      padding: 0 0.7rem;
+      color: #a0a0a0;
+      text-decoration: none;
+    }
+
+    .icon {
+      display: block;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    a:hover,
+    a:focus,
+    a.active,
+    a.focus-visible {
+      color: $primary-color;
+
+      .icon {
+        border-color: $primary-color;
+      }
+    }
+
+    a.active {
+      .icon {
+        border-color: $secondary-color;
+      }
+    }
+  }
+
+  // Calendar tags
+  // -----------------------------------------------------------------------------
+
+  .calendar-tags-view {
+    margin-bottom: 3rem;
+
+    &,
+    .view-header,
+    .view-content {
+      display: inline-flex;
+    }
+
+    .calendar-tag {
+      @extend .btn;
+      @extend .btn-outline-primary;
+
+      &.active {
+        border-color: $secondary-color;
+        background-color: $secondary-color;
+        color: white;
+      }
+    }
+  }
+
+  // Back to top button
+  // ---------------------------------------------------------------------------
+
+  .back-to-top {
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      @extend .btn;
+      @extend .btn-icon;
+      @extend .btn-outline-primary;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    .material-icons {
+      position: relative;
+      display: inline-block;
+      padding-right: 0.5rem;
+    }
+  }
+}

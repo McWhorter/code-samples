@@ -1,0 +1,67 @@
+// =============================================================================
+// Page Toolbar
+// =============================================================================
+
+.page-toolbar {
+  display: flex;
+  margin-left: auto;
+
+  // Hide toolbar on large breakpoints.
+  @include breakpoint(lg) {
+    display: none;
+  }
+
+  button {
+    width: rem-calc(48);
+    height: rem-calc(48);
+    padding: rem-calc(12);
+    border-radius: 100%;
+    color: $a11y-text;
+    transition: 0.2s ease-out;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: inherit;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $a11y-bg--hover;
+      color: $a11y-text--hover;
+    }
+
+    &:active {
+      background: $a11y-bg--active;
+    }
+  }
+
+  // Don't display the search icon but leave it there in case the
+  // particular theme needs it.
+
+  .button__search {
+    display: none;
+  }
+
+  .button__menu {
+    &[aria-expanded=true] {
+      .icon__menu {
+        display: none;
+      }
+
+      .icon__close {
+        display: block;
+      }
+    }
+
+    &[aria-expanded=false] {
+      .icon__menu {
+        display: block;
+      }
+
+      .icon__close {
+        display: none;
+      }
+    }
+  }
+}

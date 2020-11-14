@@ -1,0 +1,26 @@
+// =============================================================================
+// Form Fieldset
+// =============================================================================
+
+fieldset {
+  padding: 2rem 1rem 1rem;
+  border: 1px solid #eee;
+  margin: 2rem 0;
+
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  @include breakpoint(md) {
+    padding: 2rem;
+  }
+}
+
+legend {
+  padding: rem-calc(0 3);
+  margin: 0;
+  margin-left: rem-calc(-3);
+  font-weight: bold;
+}

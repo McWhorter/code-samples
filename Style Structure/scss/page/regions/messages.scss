@@ -1,0 +1,15 @@
+// =============================================================================
+// Page Messages
+// =============================================================================
+
+.page-messages {
+  position: fixed;
+  z-index: 100;
+  right: rem-calc(20);
+  bottom: rem-calc(10);
+  overflow: inherit;
+  max-height: 25vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: inherit;
+  overflow-y: scroll;
+}

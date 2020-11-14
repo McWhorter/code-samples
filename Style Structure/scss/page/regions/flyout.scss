@@ -1,0 +1,58 @@
+// =============================================================================
+// Page Flyout
+// =============================================================================
+
+@import 'flyout/search';
+@import 'flyout/main-navigation';
+
+.page-flyout {
+  position: fixed;
+  z-index: 100;
+  top: var(--headerHeight);
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  overflow: hidden;
+  background-color: $secondary-color;
+  opacity: 0;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.2s ease-out;
+  visibility: hidden;
+
+  // Hide flyout on larger devices.
+  @include breakpoint(lg) {
+    display: none;
+  }
+
+  .flyout--active & {
+    bottom: 0;
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(100);
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    visibility: inherit;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Includes a hide button but disables it.
+  // It's there if you need it though.
+  .button__close {
+    @include close-button;
+
+    display: none;
+  }
+}
+
+// Lock down body scroll when flyout is active.
+// -----------------------------------------------------------------------------
+
+body.flyout--active {
+  @include breakpoint(lg-down) {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,25 @@
+// =============================================================================
+// Readmore Mixin
+// =============================================================================
+
+@mixin read-more() {
+  display: inline-block;
+
+  a {
+    &:after {
+      display: inline-block;
+      margin-left: 0.3em;
+      content: '>';
+      transition: 0.15s ease-in-out;
+    }
+
+    &:hover,
+    &.focus-visible {
+      text-decoration: underline;
+
+      &:after {
+        transform: translateX(0.15em);
+      }
+    }
+  }
+}

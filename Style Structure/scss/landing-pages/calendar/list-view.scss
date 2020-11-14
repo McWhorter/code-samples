@@ -1,0 +1,135 @@
+// List Calendar
+// -----------------------------------------------------------------------------
+
+.calendar--list {
+  .view-empty {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .list-month {
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+
+    span {
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+  }
+
+  .list-calendar-date {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+
+    a {
+      display: block;
+      padding: 1.5rem;
+      border-bottom: none;
+      border-left: 2rem solid $primary-color;
+      background-color: #e8e8e8;
+      color: inherit;
+      text-decoration: none;
+      transition: 0.2s ease-out;
+
+      @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #ddd;
+      }
+    }
+  }
+
+  .event-date-tile {
+    display: inline-block;
+    width: 13rem;
+    box-sizing: border-box;
+    border-right: 0;
+    text-align: left;
+    vertical-align: top;
+
+    @include breakpoint(md) {
+      width: 16%;
+      flex: 0 0 16%;
+      text-align: center;
+    }
+
+    .month {
+      display: block;
+      margin-bottom: -1rem;
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+
+    .day {
+      font-size: 3rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .day-of-week {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      width: 4rem;
+      color: white;
+      font-size: rem-calc(15);
+      font-weight: 600;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-90deg) translate(-20%, -50%);
+      transform-origin: left top 0;
+      transform-origin: 50% 50%;
+    }
+  }
+
+  .event-date-header {
+    display: inline-block;
+    padding-left: 0;
+    vertical-align: top;
+
+    @include breakpoint(md) {
+      width: 82%;
+      flex: 0 0 82%;
+      padding-left: 5rem;
+      border-left: 2px solid #d2d5d6;
+    }
+
+    .event-date-title {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .event-date-subtitle {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-date {
+      display: flex;
+      margin-top: 0.5rem;
+      margin-right: 3rem;
+
+      .material-icons {
+        padding-right: rem-calc(5);
+      }
+    }
+
+    .event-meta {
+      display: flex;
+    }
+
+    .event-address {
+      .material-icons {
+        position: relative;
+        top: rem-calc(6);
+      }
+    }
+  }
+}

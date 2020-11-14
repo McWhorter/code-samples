@@ -1,0 +1,33 @@
+// ============================================================================
+// Admin Toolbar - Manages various offsets based on the presence of the
+// admin toolbar and it's various states.
+// ============================================================================
+
+$toolbar-height: 39px;
+$toolbar-height--open: 79px;
+
+body.toolbar-fixed {
+  .page-flyout {
+    top: calc(#{$toolbar-height} + var(--headerHeight));
+    height: calc(100vh - (#{$toolbar-height} + var(--headerHeight)));
+  }
+
+  @include breakpoint(lg) {
+    .js-sticky-active {
+      top: calc(var(--whitespace) / 2 + #{$toolbar-height});
+    }
+  }
+}
+
+body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open {
+  .page-flyout {
+    top: calc(#{$toolbar-height--open} + var(--headerHeight));
+    height: calc(100vh - (#{$toolbar-height--open} + var(--headerHeight)));
+  }
+
+  @include breakpoint(lg) {
+    .js-sticky-active {
+      top: calc(var(--whitespace) / 2 + #{$toolbar-height--open});
+    }
+  }
+}

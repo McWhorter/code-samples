@@ -1,0 +1,39 @@
+// Content Channel Display : Pod Mode
+// -----------------------------------------------------------------------------
+
+.block--content-display {
+  &.block--pod {
+    .item {
+      margin-bottom: 2rem;
+    }
+
+    .item:nth-child(even) {
+      a.redirect {
+        background-color: $primary-color;
+
+        &:hover,
+        &.focus-visible {
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+    @include breakpoint(md-only) {
+      .item-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(var(--gap) * -1);
+        margin-left: calc(var(--gap) * -1);
+
+        .item {
+          margin-right: var(--gap);
+          margin-left: var(--gap);
+        }
+      }
+
+      .node--pod {
+        height: 100%;
+      }
+    }
+  }
+}

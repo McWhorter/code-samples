@@ -1,0 +1,36 @@
+// =============================================================================
+// Form Checkbox
+// =============================================================================
+
+[type=file],
+[type=checkbox],
+[type=radio] {
+  margin: 0 0 1.5rem;
+}
+
+// Styles for input/label siblings
+[type=radio] + label,
+[type=checkbox] + label {
+  display: inline-block;
+  max-width: 90%;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
+  line-height: 1.2;
+  vertical-align: baseline;
+
+  &[for] {
+    cursor: pointer;
+  }
+}
+
+// Styles for inputs inside labels
+label > [type=checkbox],
+label > [type=radio] {
+  margin-right: 0.5rem;
+}
+
+// Normalize file input width
+[type=file] {
+  width: 100%;
+}

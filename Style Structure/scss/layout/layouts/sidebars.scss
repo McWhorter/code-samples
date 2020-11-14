@@ -1,0 +1,78 @@
+// ============================================================================
+// Column layout with main content and both sidebars
+// ============================================================================
+
+.layout--sidebars {
+  .sidebars-grid {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(lg) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .page-content,
+  .page-sidebar--right {
+    margin-top: var(--whitespace);
+    margin-bottom: var(--whitespace);
+  }
+
+  .page-sidebar--left {
+    order: -1;
+
+    @include breakpoint(lg) {
+      margin-top: var(--whitespace);
+      margin-bottom: var(--whitespace);
+    }
+  }
+
+  .page-content {
+    @include breakpoint(lg) {
+      width: auto;
+      flex: 1 1 0;
+    }
+  }
+
+  .page-sidebar {
+    @include breakpoint(lg) {
+      width: 25%;
+      flex: 0 0 auto;
+    }
+  }
+
+  .page-sidebar--inner {
+    &.js-sticky-active {
+      @include breakpoint(lg) {
+        position: sticky;
+        top: var(--whitespace);
+      }
+    }
+  }
+}
+
+.layout--sidebars--left {
+  .page-content {
+    @include breakpoint(lg) {
+      padding-left: calc(var(--gap) * 2);
+    }
+  }
+}
+
+.layout--sidebars--right {
+  .page-content {
+    @include breakpoint(lg) {
+      padding-right: calc(var(--gap) * 2);
+    }
+  }
+}
+
+.layout--sidebars--both {
+  .page-content {
+    @include breakpoint(lg) {
+      padding-right: calc(var(--gap) * 2);
+      padding-left: calc(var(--gap) * 2);
+    }
+  }
+}

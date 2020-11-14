@@ -1,0 +1,32 @@
+// =============================================================================
+// Directory Alphabet Filter
+// =============================================================================
+
+.directory-alphabet-filter {
+  font-size: 0;
+
+  li {
+    margin-right: rem-calc(4);
+    margin-bottom: rem-calc(4);
+  }
+
+  li.disabled {
+    display: none;
+  }
+
+  a {
+    width: 2em;
+    padding: 0.7em 0 0.2em;
+    background-color: #e8e8e8;
+    color: #727272;
+    font-size: rem-calc(14);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}

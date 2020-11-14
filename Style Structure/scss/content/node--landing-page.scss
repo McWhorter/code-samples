@@ -1,0 +1,13 @@
+// Node Container Type - Landing Page
+// -----------------------------------------------------------------------------
+
+.node--landing-page {
+  // @info Shares all styles from `node--view-mode-full.scss`
+
+  .page-content {
+    .block-directory-block,
+    .content-display-block {
+      margin: var(--whitespace) 0;
+    }
+  }
+}

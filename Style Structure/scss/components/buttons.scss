@@ -1,0 +1,86 @@
+// =============================================================================
+// Button
+// =============================================================================
+
+.btn {
+  display: block;
+  padding: 0.75em 2rem;
+  border: 2px solid transparent;
+  margin: 0 0 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: normal;
+  text-align: center;
+  transition: 0.2s ease-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @include breakpoint(md) {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  &.btn-icon {
+    display: flex;
+    align-items: center;
+    padding-right: 2.5em;
+
+    @include breakpoint(md) {
+      display: inline-flex;
+    }
+  }
+
+  .icon {
+    line-height: 0;
+  }
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    fill: currentColor;
+  }
+}
+
+// Alternate buttons
+// -----------------------------------------------------------------------------
+
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    background-color: var(--#{$color}Color);
+    color: white;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($value, 7.5%);
+      color: white;
+    }
+  }
+
+  .btn-outline-#{$color} {
+    border-color: var(--#{$color}Color);
+    color: var(--#{$color}Color);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($value, 7.5%);
+      color: white;
+    }
+  }
+}
+
+// Block sizes
+// -----------------------------------------------------------------------------
+
+.btn-large {
+  font-size: 1.15rem;
+}
+
+.btn-medium {
+  font-size: 1rem;
+}
+
+.btn-small {
+  font-size: 0.85rem;
+}

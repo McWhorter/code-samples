@@ -1,0 +1,25 @@
+// =============================================================================
+// Delight variables
+// =============================================================================
+
+@import 'utils/easing';
+
+// Main color palette
+// -----------------------------------------------------------------------------
+$primary-color: var(--primaryColor);
+$secondary-color: var(--secondaryColor);
+$border-color: var(--borderColor);
+$text-color: var(--textColor);
+
+// Global font properties
+// -----------------------------------------------------------------------------
+$global-font-size: var(--fontSize);
+$global-font-weight: var(--fontWeight);
+$global-line-height: var(--lineHeight);
+
+// Accessibility color aids
+// -----------------------------------------------------------------------------
+$a11y-text: #757575;
+$a11y-text--hover: #1d1d1d;
+$a11y-bg--hover: #f2f2f2;
+$a11y-bg--active: #e3e3e3;

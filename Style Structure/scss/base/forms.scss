@@ -1,0 +1,31 @@
+// =============================================================================
+// Forms
+// =============================================================================
+
+@import 'forms/text';
+@import 'forms/checkbox';
+@import 'forms/label';
+@import 'forms/fieldset';
+@import 'forms/select';
+
+.form-actions {
+  margin: 1.5rem 0;
+
+  a.button,
+  .form-submit {
+    @include form-submit();
+
+    color: $primary-color;
+
+    &.button--primary {
+      border-color: #c9e1bd;
+      background-color: #f3faef;
+      color: #325e1c;
+
+      &:hover,
+      &:focus {
+        background-color: #c9e1bd;
+      }
+    }
+  }
+}

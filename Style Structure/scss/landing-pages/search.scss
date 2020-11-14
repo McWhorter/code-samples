@@ -1,0 +1,69 @@
+// =============================================================================
+// Search API Landing Page
+// =============================================================================
+
+.search-container {
+  .search-header {
+    margin-bottom: 1rem;
+  }
+}
+
+.block-search-block {
+  form {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    font-weight: 600;
+
+    @include breakpoint(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    font-weight: 600;
+
+    @include breakpoint(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-item {
+    @include breakpoint(md) {
+      width: 60%;
+      flex: 1 1 60%;
+    }
+  }
+
+  .form-actions {
+    @include breakpoint(md) {
+      width: auto;
+      flex: 1 1 auto;
+      margin-left: 20px;
+    }
+  }
+
+  .form-submit {
+    background-color: transparent;
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+
+  .search-results {
+    margin: 2rem 0;
+  }
+
+  .pagination {
+    text-align: center;
+  }
+}

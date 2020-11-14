@@ -9,7 +9,7 @@ I was responsibile for the complete buildout of all structure, styling, and func
 - [Alameda County Employees’ Retirement Association](https://www.acera.org/)
 - [Western City Magazine](https://www.westerncity.com/)
 - [New York City Employees’ Retirement System](https://www.nycers.org/)
-- [Los Angles City Employees’ Retirement System' ](https://www.lacers.org/)
+- [Los Angles City Employees’ Retirement System](https://www.lacers.org/)
 
 ## Code Samples
 
@@ -51,4 +51,5 @@ This component creates a toggle state to show/hide content based on user click i
 
 This is an example of my typical directory structure, code style, and code standards.
 
-[code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure)
+* Sass based [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
+* {less} based [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)

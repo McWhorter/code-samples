@@ -1,0 +1,87 @@
+// =============================================================================
+// Directory
+// =============================================================================
+
+.block-directory-block {
+  form {
+    padding-right: 0;
+    padding-left: 0;
+    font-weight: 600;
+
+    @include breakpoint(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    font-weight: 600;
+
+    @include breakpoint(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-item {
+    @include breakpoint(md) {
+      width: 35%;
+      flex: 1 0 35%;
+    }
+  }
+
+  .seperator {
+    padding: 0 15px;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include breakpoint(md) {
+      width: auto;
+      flex: 0 1 auto;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    span {
+      white-space: nowrap;
+
+      &:before,
+      &:after {
+        content: ' - ';
+      }
+    }
+  }
+
+  .form-actions {
+    @include breakpoint(md) {
+      width: auto;
+      flex: 1 1 auto;
+      margin-left: 20px;
+    }
+  }
+
+  .shs-widget-container {
+    display: inline;
+  }
+
+  .shs-field-container {
+    margin-bottom: 0;
+  }
+
+  .directory-alphabet-filter {
+    margin: 2rem 0;
+
+    .pagination {
+      text-align: left;
+    }
+  }
+
+  // Removes the first result's top border
+  .views-element-container + .views-row article {
+    border-top: 0;
+  }
+}

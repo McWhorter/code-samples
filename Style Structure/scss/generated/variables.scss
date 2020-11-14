@@ -1,0 +1,88 @@
+$delight: (
+  customProperties: (
+    --primaryColor: #007a9f,
+    --secondaryColor: #033d5e,
+    --submitColor: #007a9f,
+    --fontSize: 16px,
+    --fontWeight: 400,
+    --fontFamily: system-ui,
+    --lineHeight: 1.5
+  ),
+  globalStyles: (
+    fontSize: var(--fontSize),
+    fontWeight: var(--fontWeight),
+    fontFamily: var(--fontFamily),
+    lineHeight: var(--lineHeight),
+    textColor: var(--textColor),
+    backgroundColor: var(--backgroundColor)
+  ),
+  brandingColors: (
+    primaryColor: var(--primaryColor),
+    secondaryColor: var(--secondaryColor),
+    submitColor: var(--submitColor)
+  ),
+  primaryColor: var(--primaryColor),
+  secondaryColor: var(--secondaryColor),
+  submitColor: var(--submitColor),
+  mediaQueries: (
+    sm: "(min-width: 576px)",
+    sm-down: "(max-width: 575.98px)",
+    sm-only: "(min-width: 576px) and (max-width: 767.98px)",
+    md: "(min-width: 768px)",
+    md-down: "(max-width: 767.98px)",
+    md-only: "(min-width: 768px) and (max-width: 1023.98px)",
+    lg: "(min-width: 1024px)",
+    lg-down: "(max-width: 1023.98px)",
+    lg-only: "(min-width: 1024px) and (max-width: 1365.98px)",
+    xl: "(min-width: 1366px)",
+    xl-down: "(max-width: 1365.98px)",
+    xl-only: "(min-width: 1366px) and (max-width: 1919.98px)",
+    max: "(min-width: 1920px)",
+    max-down: "(max-width: 1919.98px)"
+  ),
+  globals: (
+    fontSize: 16,
+    fontWeight: 400,
+    fontFamily: system-ui,
+    lineHeight: 1.5,
+    textColor: #1d1d1d,
+    backgroundColor: #fff
+  ),
+  colors: (
+    primary: #007a9f,
+    secondary: #033d5e,
+    submit: #007a9f
+  ),
+  headings: (
+    h1: 40,
+    h2: 32,
+    h3: 28,
+    h4: 24,
+    h5: 20,
+    h6: 16
+  ),
+  breakpoints: (
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 1024,
+    xl: 1366,
+    max: 1920
+  ),
+  gutters: (
+    xs: 20,
+    sm: 36,
+    md: 80,
+    lg: 83,
+    xl: 120,
+    max: auto
+  ),
+  gaps: (
+    xs: 10,
+    sm: 10,
+    md: 20,
+    lg: 35,
+    xl: 40,
+    max: 40
+  )
+);

@@ -1,0 +1,23 @@
+// Node View Mode - Teaser Pod
+// -----------------------------------------------------------------------------
+
+.node--view-mode-teaser_pod {
+  @include teaser($separator: false, $float: false);
+
+  .node-featured-image {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .node-header {
+    .title {
+      font-size: rem-calc(25);
+    }
+  }
+
+  .node-subheader {
+    margin-top: 1rem;
+    color: inherit;
+    font-size: rem-calc(20);
+  }
+}

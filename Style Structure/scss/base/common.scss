@@ -1,0 +1,87 @@
+// =============================================================================
+// Common Styles
+// =============================================================================
+
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+.title {
+  color: inherit;
+}
+
+.subtitle {
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+
+.node-event-dates {
+  margin-right: 0;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+svg.ext {
+  display: none;
+}
+
+// Flex icon class to aid text with an inline icon
+// -----------------------------------------------------------------------------
+
+.flex-icon {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    display: block;
+    width: 1em;
+    height: 1em;
+    flex: 0 0 1em;
+    margin-right: 0.2em;
+    font-size: rem-calc(24);
+    line-height: 1;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      fill: $secondary-color;
+    }
+  }
+
+  a {
+    width: auto;
+    flex: 1 0 1px;
+    line-height: 1.4;
+  }
+}
+
+// Visibility helpers
+// -----------------------------------------------------------------------------
+
+.is-visible {
+  display: block !important;
+}
+
+.is-hidden {
+  display: none !important;
+}

@@ -1,0 +1,70 @@
+// =============================================================================
+// Accordions
+// =============================================================================
+
+@import '../variables';
+@import '../utils/mixins';
+@import '../utils/functions';
+
+.accordions {
+  & > h3:first-child {
+    margin-top: rem-calc(32);
+  }
+}
+
+// Accordion Heading
+// -----------------------------------------------------------------------------
+
+.accordion__heading {
+  position: relative;
+  padding: rem-calc(15) rem-calc(50) rem-calc(15) 0;
+  border-top: 1px solid $border-color;
+  margin: 0;
+  clear: both;
+  color: $primary-color;
+  cursor: pointer;
+  font-size: rem-calc(24);
+  font-weight: 500;
+
+  // Accordion Toggle
+  // ---------------------------------------------------------------------------
+
+  .accordion__toggle {
+    @include plusminus-toggle(30, 16, 2);
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border: rem-calc(2) solid transparent;
+    border-radius: 100%;
+    color: inherit;
+    transform: translateY(-50%);
+    transition: 0.2s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    text-decoration: underline;
+
+    .accordion__toggle {
+      background-color: $a11y-bg--hover;
+    }
+  }
+
+  &:active {
+    .accordion__toggle {
+      background-color: $a11y-bg--active;
+    }
+  }
+
+  &[aria-selected=true] {
+    border-bottom-color: transparent;
+
+    .accordion__toggle:after {
+      top: 50%;
+      height: 0;
+      opacity: 0;
+    }
+  }
+}

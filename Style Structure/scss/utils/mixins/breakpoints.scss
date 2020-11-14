@@ -1,0 +1,21 @@
+// =============================================================================
+// Breakpoints Mixin
+// =============================================================================
+
+@mixin breakpoint($value) {
+  @if length($value) == 0 {
+    @error "A breakpoint size must be passed to this function eg.(sm, md, lg)";
+  }
+
+  $query: map-get($mediaQueries, $value);
+
+  @if $query == null {
+    @content;
+  }
+
+  @else {
+    @media #{$query} {
+      @content;
+    }
+  }
+}

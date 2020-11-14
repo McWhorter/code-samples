@@ -1,0 +1,44 @@
+// =============================================================================
+// Tabs
+// =============================================================================
+
+@import '../variables';
+@import '../utils/mixins';
+@import '../utils/functions';
+
+.tablist {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  box-shadow: inset 0 -1px 0 $border-color, 0 1px 0 $border-color;
+  clear: both;
+}
+
+.tablist .tab {
+  padding: 0.3em 1.25em;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: inset 0 -1px 0 $border-color, 0 1px 0 $border-color;
+  color: $a11y-text;
+  cursor: pointer;
+  font-size: rem-calc(14);
+  line-height: 2;
+  transition: 0.3s ease-out;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: $a11y-bg--hover;
+    color: $a11y-text--hover;
+  }
+
+  &[aria-selected=true] {
+    padding: 0.3em 2em;
+    box-shadow: inset 0 -4px 0 currentColor, 0 4px 0 currentColor;
+    color: $primary-color;
+    font-weight: bold;
+  }
+}

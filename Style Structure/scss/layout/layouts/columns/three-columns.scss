@@ -1,0 +1,50 @@
+// ============================================================================
+// 3 Column Layouts
+// ============================================================================
+
+.layout--columns--3:not(.layout--sidebars) {
+  &.layout--threecol-section--50-25-25 {
+    .flex-grid > .cell {
+      @include breakpoint(lg) {
+        &:nth-child(3n+1) {
+          width: calc(#{percentage(1/2)} - (var(--gap) * 2));
+        }
+
+        &:nth-child(3n+2),
+        &:nth-child(3n+3) {
+          width: calc(#{percentage(1/4)} - (var(--gap) * 2));
+        }
+      }
+    }
+  }
+
+  &.layout--threecol-section--25-50-25 {
+    .flex-grid > .cell {
+      @include breakpoint(lg) {
+        &:nth-child(3n+1),
+        &:nth-child(3n+3) {
+          width: calc(#{percentage(1/4)} - (var(--gap) * 2));
+        }
+
+        &:nth-child(3n+2) {
+          width: calc(#{percentage(1/2)} - (var(--gap) * 2));
+        }
+      }
+    }
+  }
+
+  &.layout--threecol-section--25-25-50 {
+    .flex-grid > .cell {
+      @include breakpoint(lg) {
+        &:nth-child(3n+1),
+        &:nth-child(3n+2) {
+          width: calc(#{percentage(1/4)} - (var(--gap) * 2));
+        }
+
+        &:nth-child(3n+3) {
+          width: calc(#{percentage(1/2)} - (var(--gap) * 2));
+        }
+      }
+    }
+  }
+}

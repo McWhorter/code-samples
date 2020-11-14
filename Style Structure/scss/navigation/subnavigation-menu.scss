@@ -1,0 +1,303 @@
+// ============================================================================
+// Subnavigation (left sidebar)
+// ============================================================================
+
+// Subnavigation Block
+// ----------------------------------------------------------------------------
+
+.block--subnavigation {
+  font-size: rem-calc(18);
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  @include breakpoint(lg-down) {
+    margin: 0 calc(var(--gutter) * -1);
+  }
+
+  @include breakpoint(lg) {
+    font-size: var(--fontSize);
+  }
+
+  &.ready {
+    opacity: 1;
+  }
+}
+
+// Subnavigation Heading
+// ----------------------------------------------------------------------------
+
+.subnavigation__heading {
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+
+  @include breakpoint(lg-down) {
+    display: flex;
+    align-items: center;
+    background-color: $secondary-color;
+    color: white;
+    font-size: rem-calc(20);
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 0 0.5em;
+  }
+
+  a {
+    color: currentColor;
+    font-weight: 600;
+    text-decoration: none;
+
+    @include breakpoint(lg-down) {
+      padding: 0 1rem;
+      color: inherit;
+    }
+
+    @include breakpoint(lg) {
+      padding: 0;
+      font-size: rem-calc(18);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &.is_active {
+      color: $primary-color;
+      cursor: default;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+// Subnavigation toggle
+// --------------------------------------------------------------------------
+
+.subnavigation__toggle {
+  color: inherit;
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+
+  svg {
+    display: block;
+    width: rem-calc(48);
+    height: rem-calc(48);
+    border-right: 1px solid rgba(white, 0.5);
+    border-left: 1px solid rgba(white, 0.5);
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 0;
+
+    rect {
+      transform-origin: 50%;
+    }
+
+    .top,
+    .bottom {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .middle {
+      transition: 0.15s ease-in-out;
+    }
+  }
+
+  &[aria-expanded=true] {
+    svg {
+      .top {
+        transform: translate3d(10%, -10%, 0) rotate(-135deg);
+      }
+
+      .middle {
+        width: 0;
+        opacity: 0;
+        transform: translateX(16%);
+      }
+
+      .bottom {
+        width: 40%;
+        transform: translate3d(10%, 10%, 0) rotate(135deg);
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+  }
+
+  &:active {
+    background-color: $secondary-color;
+  }
+}
+
+// Subnavigation Menu
+// --------------------------------------------------------------------------
+
+.subnavigation__menu {
+  @include breakpoint(lg-down) {
+    overflow: hidden;
+    height: 0;
+    padding: 0 var(--gutter);
+    background-color: #eee;
+    opacity: 0;
+    transition: 0.25s ease-out;
+    visibility: hidden;
+
+    &[aria-hidden=false] {
+      overflow: visible;
+      height: auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      opacity: 1;
+      visibility: inherit;
+    }
+  }
+
+  ul,
+  li {
+    width: 100%;
+  }
+
+  ul.lv2 ul {
+    padding-left: 1em;
+  }
+
+  a {
+    padding-right: 1em;
+    padding-left: 1em;
+    color: currentColor;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .link-text {
+      display: block;
+      line-height: 1.4;
+    }
+  }
+
+  .subnav__menu {
+    a {
+      padding: 0.8em 1em;
+    }
+  }
+
+  a.lv1 {
+    padding-left: 0;
+  }
+
+  a.is-active {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  li.expanded,
+  li.collapsed {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
+    & > a {
+      flex: 1 0 1px;
+      margin-right: 0;
+    }
+  }
+
+  // Subnav menu 2nd level
+  // ------------------------------------------------------------------------
+
+  ul.lv2:before {
+    position: absolute;
+    z-index: 4;
+    top: rem-calc(5);
+    bottom: rem-calc(5);
+    left: 0;
+    width: 1px;
+    background-color: #eee;
+    content: '';
+  }
+
+  li ul {
+    min-width: 100%;
+    min-height: inherit !important;
+    box-sizing: border-box;
+    transition: 0.5s $easeOutExpo;
+  }
+
+  // Subnav toggle
+  // ------------------------------------------------------------------------
+
+  .subnav__toggle {
+    z-index: 3;
+    background-color: transparent;
+    font-size: 0;
+    transition: 0.2s ease-out;
+
+    &[aria-expanded=true]:after {
+      top: 50%;
+      height: 0;
+      opacity: 0;
+    }
+
+    & + ul {
+      overflow: hidden;
+      height: rem-calc(34);
+      margin-top: rem-calc(-34);
+      opacity: 0;
+    }
+
+    &[aria-expanded=true] + ul {
+      overflow: visible;
+      height: auto;
+      margin-top: inherit;
+      opacity: 1;
+    }
+
+    @include breakpoint(lg-down) {
+      @include plusminus-toggle(48, 17, 1);
+
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      & + ul {
+        height: rem-calc(40);
+        margin-top: -rem-calc(40);
+      }
+
+      &[aria-expanded=true] + ul {
+        padding-top: rem-calc(10);
+        padding-bottom: rem-calc(20);
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint(lg) {
+      @include plusminus-toggle(25, 11, 1);
+
+      border-radius: 100%;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        background-color: $a11y-bg--hover;
+      }
+
+      &:active {
+        background-color: $a11y-bg--active;
+      }
+    }
+  }
+}

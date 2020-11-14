@@ -1,0 +1,75 @@
+// Node Container Type - Full Content
+// -----------------------------------------------------------------------------
+
+.node--full-content {
+  .page-sidebar {
+    .block {
+      margin-bottom: 1rem;
+    }
+
+    .block-title {
+      margin-bottom: 1rem;
+      font-size: var(--fontSize);
+    }
+
+    .has-separator {
+      padding-top: 1.5rem;
+      border-top: 1px solid $border-color;
+      margin-bottom: 1.5rem;
+
+      & + .no-separator {
+        margin-top: -0.5rem;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .has-separator:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+
+    .button {
+      @include breakpoint(lg) {
+        display: block;
+      }
+    }
+  }
+
+  .node-tags {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    padding: rem-calc(25);
+    margin: 1.5rem 0;
+    background-color: #e8e8e8;
+    border-radius: rem-calc(11);
+    clear: both;
+
+    strong {
+      margin-right: rem-calc(20);
+      text-transform: uppercase;
+    }
+
+    ul.menu {
+      li {
+        white-space: nowrap;
+
+        &:not(:last-child):after {
+          padding: 0 0.5em;
+          content: '/';
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// ============================================================================
+// Standard Main Content/Overview display on all landing pages
+// ============================================================================
+
+.block--main-content {
+  margin-bottom: 2em;
+
+  @include clearfix;
+
+  figure {
+    margin-top: 1em;
+
+    img {
+      margin-bottom: 1em;
+    }
+  }
+
+  header {
+    .subtitle {
+      margin-top: 0.25em;
+    }
+  }
+
+  .body {
+    margin-top: 1em;
+  }
+
+  @include breakpoint(md) {
+    figure {
+      width: 50%;
+      margin-bottom: 1em;
+      margin-left: 1em;
+      float: right;
+    }
+  }
+}

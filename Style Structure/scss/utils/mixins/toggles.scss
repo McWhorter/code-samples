@@ -1,0 +1,79 @@
+// ============================================================================
+// Plus / Minus toggle
+// ============================================================================
+
+@mixin plusminus-toggle($button-size: 44, $icon-size: 20, $icon-thickness: 2) {
+  position: relative;
+  width: rem-calc($button-size);
+  height: rem-calc($button-size);
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: currentColor;
+    content: '';
+    transform: translate(-50%, -50%);
+    transition: inherit;
+  }
+
+  &:before {
+    width: rem-calc($icon-size);
+    height: rem-calc($icon-thickness);
+  }
+
+  &:after {
+    width: rem-calc($icon-thickness);
+    height: rem-calc($icon-size);
+  }
+}
+
+// ============================================================================
+// Arrow / Chevron Toggle
+// ============================================================================
+
+@mixin arrow-toggle($button-size: 32, $icon-size: 10, $icon-thickness: 2, $direction: down) {
+  $offset: ($button-size - $icon-size) / 2 + ($icon-size / 4 / 2);
+
+  position: relative;
+  width: rem-calc($button-size);
+  height: rem-calc($button-size);
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: rem-calc($offset);
+    left: rem-calc($offset);
+    display: block;
+    background-color: currentColor;
+    content: '';
+    transition: inherit;
+  }
+
+  &:before {
+    width: rem-calc($icon-thickness);
+    height: rem-calc($icon-size);
+  }
+
+  &:after {
+    width: rem-calc($icon-size);
+    height: rem-calc($icon-thickness);
+  }
+
+  & when ($direction = up) {
+    transform: rotate(45deg);
+  }
+
+  & when ($direction = right) {
+    transform: rotate(135deg);
+  }
+
+  & when ($direction = down) {
+    transform: rotate(225deg);
+  }
+
+  & when ($direction = left) {
+    transform: rotate(315deg);
+  }
+}

@@ -1,0 +1,26 @@
+// =============================================================================
+// Container
+// =============================================================================
+
+.container {
+  $max-gutter: map-get($gutters, 'xl');
+  $max-width: map-get($breakpoints, 'xl');
+  $max-breakpoint: $max-width + ($max-gutter * 2);
+
+  max-width: rem-calc($max-width);
+  margin-right: var(--gutter);
+  margin-left: var(--gutter);
+
+  & & {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @media (min-width: #{rem-calc($max-breakpoint)}) {
+    margin: 0 auto;
+
+    &.page-main {
+      width: 100%;
+    }
+  }
+}

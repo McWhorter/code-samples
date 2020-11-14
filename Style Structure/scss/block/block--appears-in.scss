@@ -1,0 +1,20 @@
+// ============================================================================
+// This item appears in block
+// ============================================================================
+
+.block--appears-in {
+  .block-title {
+    margin-bottom: 1rem;
+    font-size: var(--fontSize);
+  }
+
+  .menu {
+    margin: 0;
+
+    a {
+      padding-right: 0;
+      padding-left: 0;
+      text-decoration: underline;
+    }
+  }
+}

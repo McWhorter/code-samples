@@ -1,0 +1,25 @@
+// =============================================================================
+// Site Search (Flyout)
+// =============================================================================
+
+.search__flyout {
+  margin-bottom: calc(var(--whitespace) / 2);
+
+  form {
+    display: flex;
+  }
+
+  .form-item {
+    flex-grow: 1;
+  }
+
+  .form-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em;
+  }
+
+  .form-submit {
+    height: 100%;
+  }
+}

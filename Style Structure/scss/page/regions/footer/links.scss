@@ -1,0 +1,19 @@
+// =============================================================================
+// Footer links
+// =============================================================================
+
+.footer-links {
+  ul.menu {
+    margin: 0 -1rem;
+    list-style-type: none;
+
+    @include breakpoint(sm-down) {
+      flex-direction: column;
+    }
+
+    a {
+      padding: 1rem;
+      color: inherit;
+    }
+  }
+}

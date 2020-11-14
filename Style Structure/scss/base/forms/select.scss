@@ -1,0 +1,53 @@
+// =============================================================================
+// Form Checkbox
+// =============================================================================
+
+select {
+  height: 2.8rem;
+  padding: rem-calc(12 55 12 18);
+  border: 1px solid $border-color;
+  margin: 0 0 1rem;
+  appearance: none;
+  background-color: white;
+  background-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Down arrow</title><path d="M12,15.83a.51.51,0,0,1-.38-.16L7,11.08a.54.54,0,0,1,.76-.76L12,14.53l4.21-4.21a.54.54,0,0,1,.76.76l-4.59,4.59A.51.51,0,0,1,12,15.83Z"/></svg>');
+  background-position: right 0.3rem center;
+  background-repeat: no-repeat;
+  background-size: rem-calc(30);
+  border-radius: 3px;
+  color: $primary-color;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: inherit;
+  transition: 0.2s ease-out;
+
+  // Focus state
+  &:focus {
+    border: 1px solid currentColor;
+    background-color: white;
+    box-shadow: 0 0 5px $primary-color;
+    outline: none;
+    transition: 0.2s ease-out;
+  }
+
+  // Disabled state
+  &:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+
+  // Hide the dropdown arrow shown in newer IE versions
+  &::-ms-expand {
+    display: none;
+  }
+
+  &[multiple] {
+    height: auto;
+    background-image: none;
+  }
+
+  &:not([multiple]) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

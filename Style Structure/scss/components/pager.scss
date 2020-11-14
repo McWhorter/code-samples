@@ -1,0 +1,39 @@
+// =============================================================================
+// Pager
+// =============================================================================
+
+.pager {
+  width: 100%;
+
+  .pagination {
+    margin-bottom: 0;
+  }
+
+  .pager__item {
+    display: inline-block;
+
+    &.current {
+      padding: 0;
+      background-color: transparent;
+
+      a {
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  a {
+    min-width: rem-calc(28);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

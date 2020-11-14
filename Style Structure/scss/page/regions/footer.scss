@@ -1,0 +1,17 @@
+// =============================================================================
+// Page Footer
+// =============================================================================
+
+.page-footer {
+  padding: rem-calc(40) 0;
+  margin-top: auto;
+  background-color: $primary-color;
+  color: white;
+
+  a {
+    color: inherit;
+  }
+}
+
+@import 'footer/links';
+@import 'footer/creator';

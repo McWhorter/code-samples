@@ -1,0 +1,27 @@
+// Node View Mode - Related People & Profiles
+// -----------------------------------------------------------------------------
+
+.node--view-mode-related {
+  .node-featured-image {
+    margin: 1rem 0;
+  }
+
+  .node-header {
+    margin: 1rem 0;
+
+    .title {
+      color: $primary-color;
+      font-size: rem-calc(18);
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+// Teaser Mixin
+// ----------------------------------------------------------------------------
+
+@mixin teaser($separator: true, $float: left, $image-width: 35%, $prefix: '') {
+  @if $separator {
+    padding-top: 2rem;
+    border-top: 1px solid $border-color;
+    margin-bottom: 2rem;
+  }
+
+  @if $float {
+    @include clearfix();
+  }
+
+  #{$prefix} .node-header {
+    a {
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      text-decoration: underline;
+
+      .title {
+        color: inherit;
+      }
+    }
+  }
+
+  #{$prefix} .node-subheader {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: $secondary-color;
+  }
+
+  #{$prefix} .node-event-dates {
+    margin: 1rem 0 0;
+    color: $a11y-text;
+    font-size: rem-calc(15);
+    list-style-type: none;
+  }
+
+  #{$prefix} .node-featured-image {
+    margin: 2rem 0;
+
+    @if $float {
+      @include breakpoint(md) {
+        width: $image-width;
+        margin-bottom: 0.5rem;
+        float: $float;
+
+        @if $float == left {
+          margin-right: 1.25rem;
+        }
+
+        @if $float == right {
+          margin-left: 1.25rem;
+        }
+      }
+    }
+  }
+
+  #{$prefix} .node-content {
+    margin: 2rem 0;
+  }
+
+  #{$prefix} .node-links {
+    margin: 2rem 0 0;
+    list-style-type: none;
+
+    .node-readmore,
+    .body-readmore {
+      @include read-more();
+    }
+  }
+}

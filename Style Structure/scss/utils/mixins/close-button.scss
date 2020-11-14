@@ -1,0 +1,25 @@
+@mixin close-button($size: 1em, $color: white) {
+  top: $size;
+  right: $size;
+  padding: rem-calc(6);
+  margin-left: auto;
+  border-radius: 4px;
+  color: $color;
+  line-height: 0;
+  transition: 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.06);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  & svg {
+    width: 2em;
+    height: 2em;
+    fill: currentColor;
+  }
+}
