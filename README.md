@@ -53,5 +53,6 @@ This component creates a toggle state to show/hide content based on user click i
 
 This is an example of my typical directory structure, code style, and code standards.
 
-* Sass based [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
-* {less} based [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
+![Sass](./assets/images/icon-sass.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/scss)
+
+![{less}](./assets/images/icon-less.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
