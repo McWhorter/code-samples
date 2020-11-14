@@ -1,3 +1,5 @@
+![Jason standing at the edge of the Pacific Ocean in Maui, Hawaii](./assets/images/Maui%20LinkedIn.png)
+
 # Welcome to the online portfolio of Jason McWhorter
 
 ## Website Portfolio
