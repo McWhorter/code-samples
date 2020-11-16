@@ -31,7 +31,7 @@ This menu is also powered by a breakpoint configuration to aid when it should be
 
 There are many more options to tinker with. Take a look under the hood at the `Navigation.js` component's documentation.
 
-[code sample source](https://github.com/McWhorter/code-samples/tree/master/Navigation%20Menu)
+![Source Icon](./assets/images/icons/doc.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Navigation%20Menu)
 
 ---
 
@@ -43,7 +43,7 @@ I've created a custom play/pause control to aid WCAG 2.1 AA complience to autosc
 
 The component also has a SVG/CSS powered progress loop to indicate the time left before transitioning to the next slide.
 
-[code sample source](https://github.com/McWhorter/code-samples/tree/master/Carousel)
+![Source Icon](./assets/images/icons/doc.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Carousel)
 
 ---
 
@@ -51,7 +51,7 @@ The component also has a SVG/CSS powered progress loop to indicate the time left
 
 This component creates a toggle state to show/hide content based on user click interaction. It is useful to keep content organized and compact and is commonly a dropdown or accordion section.
 
-[code sample source](https://github.com/McWhorter/code-samples/tree/master/Panel%20Group)
+![Source Icon](./assets/images/icons/doc.svg) [code sample source](https://github.com/McWhorter/code-samples/tree/master/Panel%20Group)
 
 ---
 
@@ -61,31 +61,40 @@ I've created base themes from scratch for both Drupal 6 and 8. Below are some ex
 
 #### Drupal 6
 
-Creating specific node and block markup is key in order to achieving many designs. I constructed a back-end system our team used in order to connect Drupal with each node, block, or view template desired. This gave the team lots of flexibility in addition to allowing us to repurpose templates cutting down on duplicated code. The result was an efficient and manageable way to create custom markup. This system was used on 30-40 websites.
+Creating specific node and block markup is key in order to achieving many designs. I constructed a back-end system our team used in order to connect Drupal with each node, block, or view template desired. This gave the team lots of flexibility in addition to allowing us to repurpose templates cutting down on duplicated code. The result was an efficient and manageable way to create custom markup.
 
-* [template.php](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.php), where all the magic happens :)
-* [template.ext.inc](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.ext.inc) Utility functions which support `template.php`
+![Source Icon](./assets/images/icons/doc.svg) [template.php](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.php) Where all the magic happens :)
+
+![Source Icon](./assets/images/icons/doc.svg) [template.ext.inc](https://github.com/McWhorter/code-samples/tree/master/Drupal/6/template.ext.inc) Utility functions and block/node/view configuration, which support `template.php`
 
 #### Drupal 8
 
 Sidebar navigation is a key component for any large website. This menu gives the user the ability to quickly navigate and visual see any nested pages within the current section they're viewing on the website. Below is an example of one which features a toggle button which shows/hides the subitems on mobile/tablet viewports. Then on desktop, shows a typical sidebar navigation list.
 
-[Subnavigation Block twig template sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/subnavigation-block.html.twig)
+![Source Icon](./assets/images/icons/doc.svg) [Subnavigation Block twig template sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/subnavigation-block.html.twig)
 
-Behaviors play an intergral role in order to bring functionality to components on Drupal site. Below is an example of a simple accordion which leverages the [aria-tablist](https://github.com/mynamesleon/aria-tablist#readme) framework which adds accessibility support, functionality, and state management. 
+Behaviors play an intergral role in order to bring functionality to components on Drupal site. Below is an example of a simple accordion which leverages the [aria-tablist](https://github.com/mynamesleon/aria-tablist#readme) framework which adds accessibility support, functionality, and state management.
 
-[Drupal 8 Javascript behavior sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/accordions.js)
+![Source Icon](./assets/images/icons/doc.svg) [Drupal 8 Javascript behavior sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/accordions.js)
 
-Displaying a Map or creating a link to a map is a typical need of many websites. Below is a Twig example which implements either a interactive map (iframe), static map, or a static link to an external map service.
+A hero or banner is normally a keystone to any website. This is typically an in your face section at the top of the home page or main landing pages of a site. It featuring an impactful image accompanied with an overlayed message and sometimes a call to action button.
 
-[Map output twig template code sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/simple-gmap-output.html.twig)
+![Source Icon](./assets/images/icons/doc.svg) [Hero block twig template sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/block--hero.html.twig)
+
+Cards or pods are a very common components used throughout a site. These are bits of content arranged into a large button-like appearance. They typically feature an image, a title, and sometimes a small description. The entire component is typically a call to action for the user to take and can even redirect the user to other key content or supplemental content related to the current page.
+
+![Source Icon](./assets/images/icons/doc.svg) [Node/Pod twig template sample](https://github.com/McWhorter/code-samples/tree/master/Drupal/8/node--pod.html.twig)
 
 ---
 
 ### Style and Structure Example
 
-This is an example of my typical directory structure, code style, and code standards.
+These are examples of my typical directory structure, code style preference, and code standards for both a SCSS and {less} preprocessing environment.
 
-![Sass](./assets/images/icon-sass.svg) [See my SCSS style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/scss)
+![Sass](./assets/images/icons/sass.svg)
 
-![{less}](./assets/images/icon-less.svg) [See my {less} style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
+![Source Icon](./assets/images/icons/doc.svg) [See my SCSS style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/scss)
+
+![{less}](./assets/images/icons/less.svg)
+
+![Source Icon](./assets/images/icons/doc.svg) [See my {less} style, structure, and code](https://github.com/McWhorter/code-samples/tree/master/Style%20Structure/less)
