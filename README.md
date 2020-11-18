@@ -12,6 +12,7 @@ I was responsibile for the complete buildout of all structure, styling, and func
 
 - [Old Sacramento Waterfront](https://www.oldsacramento.com/)
 - [Gemini Bio](https://www.gembio.com/)
+- [Civil Justice Accociation of California](https://www.cjac.org/)
 - [Alameda County Employees’ Retirement Association](https://www.acera.org/)
 - [Western City Magazine](https://www.westerncity.com/)
 - [New York City Employees’ Retirement System](https://www.nycers.org/)
